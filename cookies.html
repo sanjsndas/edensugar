@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO essentials -->
+  <title>Cookies Policy · Eden Sugar House — Slow Baking & Preserving</title>
+  <meta name="description" content="Cookies policy for Eden Sugar House. Learn how we use cookies and similar technologies on our website.">
+  <meta property="og:title" content="Cookies Policy · Eden Sugar House">
+  <meta property="og:description" content="How we use cookies — minimal, thoughtful, just like our baking.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edensugarhouse.com/cookies.html">
+  <meta property="og:image" content="https://edensugarhouse.com/images/og-cookies.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://edensugarhouse.com/cookies.html">
+  <!-- Fonts & minimal style reset (same as homepage) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- design tokens (identical to homepage) ---------- */
+    :root {
+      --bg: #fcf9f4;
+      --surface: #ffffff;
+      --ink: #1e1b16;
+      --ink-soft: #3a352e;
+      --muted: #6b645c;
+      --border: #e2dbd2;
+      --border-light: #eee8e0;
+      --accent: #9f6b4b;
+      --accent-soft: #f2e3d9;
+      --accent-deep: #6e4e38;
+      --sage: #72856b;
+      --radius-card: 16px;
+      --radius-sm: 6px;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.02);
+      --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --max-blog-width: 1120px;
+    }
+
+    /* ---------- base ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    button, input, textarea {
+      font: inherit;
+      color: inherit;
+    }
+
+    /* ---------- typography ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    h1 {
+      font-size: clamp(2rem, 7vw, 3.6rem);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+    }
+    h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin: 2rem 0 1rem;
+      font-weight: 400;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin: 1.75rem 0 0.75rem;
+      font-weight: 450;
+    }
+    p {
+      color: var(--ink-soft);
+      margin-bottom: 1.25rem;
+    }
+    ul, ol {
+      margin: 0 0 1.5rem 1.5rem;
+      color: var(--ink-soft);
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---------- layout containers ---------- */
+    .container {
+      max-width: var(--max-blog-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- header (identical to homepage) ---------- */
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1.25rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.92);
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .logo-mark {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      background: var(--accent);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+      position: relative;
+      flex-shrink: 0;
+    }
+    .logo-mark::after {
+      content: "◇";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+      font-size: 0.95rem;
+      font-weight: 450;
+      color: var(--muted);
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- cookies page specific (matches privacy-card styles) ---------- */
+    .policy-card {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-sm);
+      margin: 2.5rem 0 3rem;
+    }
+    .policy-card h1 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      margin-bottom: 0.5rem;
+    }
+    .policy-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1.25rem;
+    }
+    .policy-card h2 {
+      font-size: 1.6rem;
+      margin-top: 2.2rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 0.5rem;
+    }
+    .policy-card h3 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .policy-card a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .policy-card a:hover {
+      color: var(--accent-deep);
+    }
+    .policy-card ul, .policy-card ol {
+      margin-left: 1.8rem;
+    }
+    .policy-card li {
+      margin-bottom: 0.6rem;
+    }
+    .policy-card .note-box {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 1.75rem 0;
+    }
+    .policy-card .note-box p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+    .policy-card .note-box strong {
+      color: var(--accent-deep);
+    }
+
+    /* cookie table */
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .cookie-table th {
+      text-align: left;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      font-weight: 500;
+      padding: 0.75rem 0.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .cookie-table td {
+      padding: 0.75rem 0.8rem;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: top;
+      color: var(--ink-soft);
+    }
+    .cookie-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* ---------- footer ---------- */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border-light);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media (min-width: 700px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+      }
+    }
+    .footer-col h4 {
+      font-size: 1rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+    .footer-col ul {
+      list-style: none;
+      margin-left: 0;
+    }
+    .footer-col li {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+    .footer-bottom {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--muted);
+      gap: 1rem;
+    }
+
+    /* ---------- utility ---------- */
+    .hidden { display: none !important; }
+    .mt-2 { margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Eden Sugar House home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        Eden Sugar House
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html" style="color: var(--accent);">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ========== COOKIES POLICY CONTENT ========== -->
+    <div class="policy-card">
+      <h1>Cookies Policy</h1>
+      <div class="policy-meta">
+        <span>Last updated: April 2025</span> · <span>Version 1.0</span>
+      </div>
+
+      <p>Like a dusting of flour on a pastry board, cookies are a small but useful part of how our website works. This policy explains what cookies are, how we use them on Eden Sugar House, and how you can manage your preferences.</p>
+
+      <div class="note-box">
+        <p><strong>In short:</strong> We use only a few essential cookies to make the site function, and optional analytics cookies to understand what recipes you love. No advertising trackers, no selling your data.</p>
+      </div>
+
+      <h2>1. What are cookies?</h2>
+      <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the site owners.</p>
+      <p>Cookies can be "persistent" (they stay on your device until they expire or you delete them) or "session" cookies (they are deleted when you close your browser). They can also be "first-party" (set by us) or "third-party" (set by another service we use).</p>
+
+      <h2>2. How we use cookies</h2>
+      <p>We use a minimal set of cookies, grouped into three categories:</p>
+
+      <h3>Essential cookies</h3>
+      <p>These are necessary for the website to function and cannot be switched off. They are usually set in response to actions you take, such as setting your privacy preferences or filling in forms. Without these, the site may not work properly.</p>
+
+      <h3>Preference cookies</h3>
+      <p>These allow the website to remember choices you make (such as your preferred language or the region you are in) and provide enhanced, more personal features. For example, we might use a cookie to remember if you've dismissed a notice.</p>
+
+      <h3>Analytics cookies (optional)</h3>
+      <p>These help us understand how visitors interact with our website by collecting and reporting information anonymously. We use this data to improve our recipes, navigation, and overall experience. You can opt out of these without affecting your ability to use the site.</p>
+
+      <p><strong>We do not use advertising or targeting cookies.</strong> We don't track you across other websites, and we never sell your data.</p>
+
+      <h2>3. Specific cookies we use</h2>
+      <p>Below is a list of the specific cookies that may be set when you visit Eden Sugar House. We keep this list as up-to-date as possible.</p>
+
+      <table class="cookie-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Purpose</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>esh_cookie_consent</code></td>
+            <td>Essential</td>
+            <td>Stores your cookie consent preferences so we don't ask you again on every page.</td>
+            <td>12 months</td>
+          </tr>
+          <tr>
+            <td><code>esh_session</code></td>
+            <td>Essential</td>
+            <td>Maintains your session while you browse the site (e.g., to keep a form partially filled).</td>
+            <td>Session</td>
+          </tr>
+          <tr>
+            <td><code>esh_preferences</code></td>
+            <td>Preference</td>
+            <td>Remembers small choices like dismissing a notice or your preferred reading view.</td>
+            <td>6 months</td>
+          </tr>
+          <tr>
+            <td><code>_ga</code> / <code>_ga_*</code></td>
+            <td>Analytics (optional)</td>
+            <td>Used by Google Analytics to distinguish unique users and track page views anonymously. Only set if you accept analytics cookies.</td>
+            <td>2 years</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box">
+        <p><strong>Note:</strong> Third-party services we use (like our newsletter platform) may set their own cookies when you interact with their features. We do not control those cookies, and we recommend checking the relevant third-party policies for more information.</p>
+      </div>
+
+      <h2>4. Your cookie choices</h2>
+      <p>When you first visit our site, you'll see a cookie banner that allows you to accept or reject non-essential cookies. You can also manage cookies through your browser settings at any time.</p>
+      <p>Most browsers allow you to:</p>
+      <ul>
+        <li>See what cookies you have and delete them individually</li>
+        <li>Block third-party cookies</li>
+        <li>Block cookies from specific sites</li>
+        <li>Block all cookies</li>
+        <li>Delete all cookies when you close your browser</li>
+      </ul>
+      <p>Please note that if you block essential cookies, some parts of the website may not function correctly. For more information on how to manage cookies, visit <a href="https://www.aboutcookies.org" target="_blank" rel="noopener noreferrer">www.aboutcookies.org</a>.</p>
+
+      <h2>5. How to opt out of analytics</h2>
+      <p>If you'd like to opt out of Google Analytics across all websites, you can install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>. Alternatively, you can disable analytics cookies via our cookie banner (if you haven't already) or through your browser settings.</p>
+
+      <h2>6. Changes to this policy</h2>
+      <p>We may update this Cookies Policy from time to time to reflect changes in technology, legislation, or our practices. When we do, we will revise the "Last updated" date at the top of this page. We encourage you to review this page periodically to stay informed about how we use cookies.</p>
+
+      <h2>7. More information</h2>
+      <p>For more details on how we handle your personal data, please see our <a href="privacy.html">Privacy Policy</a>. If you have any questions about our use of cookies, you can contact us at:</p>
+      <ul>
+        <li>Email: <a href="mailto:hello@edensugarhouse.com">hello@edensugarhouse.com</a></li>
+        <li>Contact page: <a href="contact.html">edensugarhouse.com/contact</a></li>
+      </ul>
+      <p>We're happy to help — and we promise not to leave crumbs.</p>
+
+      <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light); font-size: 0.9rem; color: var(--muted);">
+        <p>This cookies policy is provided for informational purposes and does not constitute legal advice. It is intended to comply with the General Data Protection Regulation (GDPR), the ePrivacy Directive, and other applicable laws.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="font-size: 1.6rem;">
+            <span class="logo-mark" aria-hidden="true"></span>
+            Eden Sugar House
+          </a>
+          <p style="font-size: 0.9rem; margin-top: 1rem; color: var(--muted);">Slow baking, wild sweetness, and preserving the seasons. A journal from our kitchen to yours.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html#baking">Baking</a></li>
+            <li><a href="index.html#preserving">Preserving</a></li>
+            <li><a href="index.html#seasonal">Seasonal</a></li>
+            <li><a href="index.html#pantry">Pantry</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">Substack</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Eden Sugar House. All rights reserved.</span>
+        <span>Made with patience and wild yeast.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCHEMA MARKUP for CookiesPolicy ========== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Cookies Policy — Eden Sugar House",
+    "url": "https://edensugarhouse.com/cookies.html",
+    "description": "Cookies policy for Eden Sugar House. Learn how we use cookies and similar technologies.",
+    "about": {
+      "@type": "Thing",
+      "name": "Cookies Policy"
+    },
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Eden Sugar House",
+      "email": "hello@edensugarhouse.com",
+      "url": "https://edensugarhouse.com"
+    }
+  }
+  </script>
+
+  <!-- ========== INTERACTIVE JAVASCRIPT (minimal) ========== -->
+  <script>
+    (function() {
+      'use strict';
+      // Smooth anchor scrolling for internal links
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href').substring(1);
+          if (targetId) {
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) {
+              e.preventDefault();
+              targetEl.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

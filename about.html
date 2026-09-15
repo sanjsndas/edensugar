@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Eden Sugar House</title>
+  <meta name="description" content="Learn about Eden Sugar House — a slow baking and preserving journal by Elara Voss and Marcus Reed. Our story, philosophy, and the sugar house kitchen.">
+  <meta property="og:title" content="About · Eden Sugar House">
+  <meta property="og:description" content="Slow baking, wild sweetness, and preserving. Meet the bakers behind Eden Sugar House.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edensugarhouse.com/about.html">
+  <meta property="og:image" content="https://edensugarhouse.com/images/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://edensugarhouse.com/about.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- design tokens (identical to main site) ---------- */
+    :root {
+      --bg: #fcf9f4;
+      --surface: #ffffff;
+      --ink: #1e1b16;
+      --ink-soft: #3a352e;
+      --muted: #6b645c;
+      --border: #e2dbd2;
+      --border-light: #eee8e0;
+      --accent: #9f6b4b;
+      --accent-soft: #f2e3d9;
+      --accent-deep: #6e4e38;
+      --sage: #72856b;
+      --radius-card: 16px;
+      --radius-sm: 6px;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.02);
+      --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --max-blog-width: 1120px;
+    }
+
+    /* ---------- base ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ---------- typography ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    h1 {
+      font-size: clamp(2rem, 7vw, 3.6rem);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+    }
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-weight: 450;
+    }
+    p {
+      color: var(--ink-soft);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ---------- layout ---------- */
+    .container {
+      max-width: var(--max-blog-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- header (identical) ---------- */
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1.25rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.92);
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .logo-mark {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      background: var(--accent);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+      position: relative;
+      flex-shrink: 0;
+    }
+    .logo-mark::after {
+      content: "◇";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+      font-size: 0.95rem;
+      font-weight: 450;
+      color: var(--muted);
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- about page specific ---------- */
+    .about-hero {
+      margin: 3rem 0 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    @media (min-width: 800px) {
+      .about-hero {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+    }
+    .about-hero-content h1 {
+      margin-bottom: 1.5rem;
+    }
+    .about-hero-content p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: var(--ink-soft);
+      max-width: 600px;
+    }
+    .about-hero-image {
+      background: var(--accent-soft);
+      border-radius: var(--radius-card);
+      height: 300px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%23f2e3d9"/><circle cx="120" cy="140" r="70" fill="%23d4b8a2" opacity="0.7"/><circle cx="280" cy="100" r="50" fill="%23c7a585" opacity="0.8"/><circle cx="300" cy="200" r="40" fill="%23b58b6a" opacity="0.9"/><circle cx="80" cy="240" r="35" fill="%239f6b4b" opacity="0.5"/></svg>');
+      background-size: cover;
+      background-position: center;
+      border: 1px solid var(--border-light);
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 1rem;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin: 3rem 0;
+    }
+    @media (min-width: 700px) {
+      .story-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .story-card {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 2rem 1.8rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .story-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+    .story-card p:last-child {
+      margin-bottom: 0;
+    }
+    .story-card .avatar {
+      width: 64px;
+      height: 64px;
+      background: var(--accent-soft);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--accent-deep);
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    @media (min-width: 600px) {
+      .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .value-item {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .value-item .icon {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+    .value-item h4 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .value-item p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .quote-block {
+      background: var(--surface);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius-card) var(--radius-card) 0;
+      padding: 2rem 2rem 2rem 2.5rem;
+      margin: 2.5rem 0;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      border-left-width: 4px;
+      border-left-color: var(--accent);
+    }
+    .quote-block p {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      line-height: 1.4;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      font-style: italic;
+    }
+    .quote-block cite {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    /* ---------- footer (identical) ---------- */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border-light);
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media (min-width: 700px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+      }
+    }
+    .footer-col h4 {
+      font-size: 1rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+    .footer-bottom {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--muted);
+      gap: 1rem;
+    }
+
+    /* utility */
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Eden Sugar House home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        Eden Sugar House
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+         <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ========== ABOUT HERO ========== -->
+    <section class="about-hero">
+      <div class="about-hero-content">
+        <h1>We are Eden Sugar House</h1>
+        <p>A small kitchen journal devoted to slow baking, wild sweetness, and the quiet craft of preserving. We believe good food takes time — and that the best recipes are the ones you return to, season after season.</p>
+      </div>
+      <div class="about-hero-image" role="img" aria-label="Abstract illustration of organic shapes in warm tones"></div>
+    </section>
+
+    <!-- ========== OUR STORY ========== -->
+    <div class="story-grid">
+      <div class="story-card">
+        <div class="avatar">EV</div>
+        <h3>Elara Voss</h3>
+        <p>Elara is a former pastry chef who traded restaurant kitchens for a quiet counter in the Hudson Valley. She is the author of our sourdough guides, preserves, and anything involving brown butter. Her philosophy: “If it isn't worth burning, it isn't worth baking.”</p>
+        <p>When she's not testing a new galette recipe, she's probably reading old cookbooks or tending to her ever-growing collection of fermentation crocks.</p>
+      </div>
+      <div class="story-card">
+        <div class="avatar">MR</div>
+        <h3>Marcus Reed</h3>
+        <p>Marcus is a fermentation nerd and weekend baker. He brought the hot sauce, the bone broth, and the scientific curiosity. He believes that the best way to learn is to make a mess, take notes, and try again.</p>
+        <p>Marcus handles our technique deep-dives and is the reason our pantry is always full of bubbling jars. He's currently working on a series about wild yeasts.</p>
+      </div>
+    </div>
+
+    <!-- ========== PHILOSOPHY / VALUES ========== -->
+    <h2 style="margin-top: 1rem;">What guides us</h2>
+    <div class="values-grid">
+      <div class="value-item">
+        <span class="icon" aria-hidden="true">⏳</span>
+        <h4>Slow by choice</h4>
+        <p>We prioritize flavor over speed. Long ferments, patient proofing, and the magic of time.</p>
+      </div>
+      <div class="value-item">
+        <span class="icon" aria-hidden="true">🌿</span>
+        <h4>Seasonal & wild</h4>
+        <p>We cook with what's growing now, and we let wild yeasts and natural cultures do their work.</p>
+      </div>
+      <div class="value-item">
+        <span class="icon" aria-hidden="true">📓</span>
+        <h4>Tested & honest</h4>
+        <p>Every recipe is tested in our home kitchen. We share failures as well as successes.</p>
+      </div>
+    </div>
+
+    <!-- ========== QUOTE ========== -->
+    <div class="quote-block">
+      <p>“The kitchen is a place of quiet transformation. Flour becomes bread; fruit becomes jam; time becomes flavor.”</p>
+      <cite>— Elara Voss, from the Eden Sugar House journal</cite>
+    </div>
+
+    <!-- ========== WHAT WE DO ========== -->
+    <h2 style="margin-top: 2rem;">What you'll find here</h2>
+    <p>Eden Sugar House is a living archive of our kitchen experiments. We publish long-form guides, tested recipes, and pantry wisdom. You'll find:</p>
+    <ul style="margin: 1.5rem 0 1.5rem 1.5rem; color: var(--ink-soft); font-size: 1.1rem; line-height: 1.8;">
+      <li><strong>Baking</strong> — sourdough, cookies, galettes, and the occasional cake.</li>
+      <li><strong>Preserving</strong> — jams, pickles, fermented hot sauce, and preserved lemons.</li>
+      <li><strong>Seasonal</strong> — what to cook with the first rhubarb, the last tomatoes.</li>
+      <li><strong>Pantry</strong> — vanilla extract, bone broth, and staples worth making yourself.</li>
+      <li><strong>Technique</strong> — tempering chocolate, maintaining a starter, and more.</li>
+    </ul>
+    <p>We have no sponsors, no ads, and no fancy equipment requirements. Just honest food, made slowly.</p>
+
+    <!-- ========== CONTACT / NOTE ========== -->
+    <div style="background: var(--surface); border-radius: var(--radius-card); border: 1px solid var(--border-light); padding: 2rem; margin: 2.5rem 0; text-align: center; box-shadow: var(--shadow-sm);">
+      <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Say hello</h3>
+      <p style="max-width: 500px; margin: 0 auto 1rem;">We love hearing from readers. Whether you have a question about a recipe, a suggestion, or just want to share a photo of your bake — we're here.</p>
+      <p style="font-weight: 500; color: var(--accent-deep);">hello@edensugarhouse.com</p>
+      <p style="font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem;">We read every email, though it may take us a few days to reply (we're probably in the kitchen).</p>
+    </div>
+
+    <!-- ========== NEWSLETTER REMINDER ========== -->
+    <section style="background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius-card); padding: 2.5rem 2rem; margin: 2rem 0 3rem; text-align: center; box-shadow: var(--shadow-sm);">
+      <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Notes from the sugar house</h2>
+      <p style="max-width: 500px; margin: 0 auto 1.5rem;">One email a week — new recipes, preserving tips, and what's in season. No spam, ever.</p>
+      <form class="newsletter-form" id="newsletterForm" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; max-width: 460px; margin: 0 auto;">
+        <input type="email" placeholder="Your email address" aria-label="Email address" required style="flex: 1 1 200px; padding: 0.8rem 1rem; border: 1px solid var(--border); border-radius: 40px; background: var(--bg); outline: none;">
+        <button type="submit" style="background: var(--accent); color: #fff; border: none; padding: 0.8rem 1.8rem; border-radius: 40px; font-weight: 500; cursor: pointer;">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="font-size: 1.6rem;">
+            <span class="logo-mark" aria-hidden="true"></span>
+            Eden Sugar House
+          </a>
+          <p style="font-size: 0.9rem; margin-top: 1rem; color: var(--muted);">Slow baking, wild sweetness, and preserving the seasons. A journal from our kitchen to yours.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html#baking">Baking</a></li>
+            <li><a href="index.html#preserving">Preserving</a></li>
+            <li><a href="index.html#seasonal">Seasonal</a></li>
+            <li><a href="index.html#pantry">Pantry</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">Substack</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Eden Sugar House. All rights reserved.</span>
+        <span>Made with patience and wild yeast.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SIMPLE SCRIPT FOR NEWSLETTER DEMO ========== -->
+  <script>
+    (function() {
+      const form = document.getElementById('newsletterForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const input = form.querySelector('input[type="email"]');
+          if (input.value.trim()) {
+            alert('Thank you for subscribing! (This is a demo — no email was sent.)');
+            input.value = '';
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

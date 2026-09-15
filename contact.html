@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO essentials -->
+  <title>Contact · Eden Sugar House — Slow Baking, Wild Sweetness & Preserving</title>
+  <meta name="description" content="Get in touch with Eden Sugar House. Questions, recipe feedback, or just to say hello — we'd love to hear from you.">
+  <meta property="og:title" content="Contact · Eden Sugar House">
+  <meta property="og:description" content="Reach out to the bakers and preservers at Eden Sugar House. We welcome your questions and notes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edensugarhouse.com/contact.html">
+  <meta property="og:image" content="https://edensugarhouse.com/images/og-contact.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://edensugarhouse.com/contact.html">
+  <!-- Fonts & minimal style reset (same as homepage) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- design tokens ---------- */
+    :root {
+      --bg: #fcf9f4;
+      --surface: #ffffff;
+      --ink: #1e1b16;
+      --ink-soft: #3a352e;
+      --muted: #6b645c;
+      --border: #e2dbd2;
+      --border-light: #eee8e0;
+      --accent: #9f6b4b;
+      --accent-soft: #f2e3d9;
+      --accent-deep: #6e4e38;
+      --sage: #72856b;
+      --radius-card: 16px;
+      --radius-sm: 6px;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.02);
+      --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --max-blog-width: 1120px;
+    }
+
+    /* ---------- base ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    button, input, textarea {
+      font: inherit;
+      color: inherit;
+    }
+
+    /* ---------- typography ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    h1 {
+      font-size: clamp(2rem, 7vw, 3.6rem);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+    }
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-weight: 450;
+    }
+    p {
+      color: var(--ink-soft);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ---------- layout containers ---------- */
+    .container {
+      max-width: var(--max-blog-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media (min-width: 880px) {
+      .blog-grid {
+        grid-template-columns: 1fr 300px;
+        gap: 3rem;
+      }
+    }
+
+    /* ---------- header (identical to homepage) ---------- */
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1.25rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.92);
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .logo-mark {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      background: var(--accent);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+      position: relative;
+      flex-shrink: 0;
+    }
+    .logo-mark::after {
+      content: "◇";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+      font-size: 0.95rem;
+      font-weight: 450;
+      color: var(--muted);
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- contact page specific ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin: 2.5rem 0;
+    }
+    @media (min-width: 800px) {
+      .contact-grid {
+        grid-template-columns: 1fr 320px;
+      }
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-card h1 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      margin-bottom: 0.5rem;
+    }
+    .contact-card > p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: var(--muted);
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .contact-form label {
+      display: block;
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+      color: var(--ink-soft);
+      letter-spacing: 0.01em;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg);
+      outline: none;
+      transition: border 0.15s, box-shadow 0.15s;
+      font-size: 1rem;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(159, 107, 75, 0.1);
+    }
+    .contact-form textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    .contact-form .btn-submit {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 40px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s;
+      font-size: 1rem;
+      display: inline-block;
+      box-shadow: 0 2px 6px rgba(159, 107, 75, 0.2);
+    }
+    .contact-form .btn-submit:hover {
+      background: var(--accent-deep);
+    }
+
+    .contact-info-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+    .contact-info-list li {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+      font-size: 0.95rem;
+    }
+    .contact-info-list .icon {
+      background: var(--accent-soft);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--accent-deep);
+      flex-shrink: 0;
+      font-weight: 500;
+    }
+    .contact-info-list strong {
+      display: block;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.15rem;
+    }
+    .contact-info-list span {
+      color: var(--muted);
+    }
+
+    .social-links-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .social-links-contact a {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      transition: all 0.15s;
+    }
+    .social-links-contact a:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* FAQ (same as homepage but with contact-specific additions) */
+    .faq-grid {
+      display: grid;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+    }
+    .faq-item h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    .faq-item p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* ---------- footer ---------- */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border-light);
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media (min-width: 700px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+      }
+    }
+    .footer-col h4 {
+      font-size: 1rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+    .footer-bottom {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--muted);
+      gap: 1rem;
+    }
+
+    /* ---------- utility ---------- */
+    .tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      padding: 0.2rem 0.7rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin: 2.5rem 0 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 0.75rem;
+    }
+    .section-title h2 {
+      margin-bottom: 0;
+      font-size: 1.8rem;
+    }
+    .sidebar-widget {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 2rem;
+    }
+    .sidebar-widget h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 0.75rem;
+    }
+    .sidebar-widget ul {
+      list-style: none;
+    }
+    .sidebar-widget li {
+      margin-bottom: 0.9rem;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .sidebar-widget a {
+      color: var(--ink-soft);
+    }
+    .sidebar-widget a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .hidden { display: none !important; }
+    .mt-2 { margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Eden Sugar House home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        Eden Sugar House
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" style="color: var(--accent);">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li> 
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ========== CONTACT SECTION ========== -->
+    <div class="contact-grid">
+      <!-- MAIN CONTACT FORM -->
+      <div class="contact-card">
+        <h1>Let’s talk</h1>
+        <p>Questions about a recipe? Want to share a preserving triumph? Or just say hello? We read every note and usually reply within a day or two.</p>
+        
+        <form class="contact-form" id="contactForm" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Clara Bennett" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Recipe question, feedback, hello…">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what’s on your mind…" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send message</button>
+        </form>
+        <p style="font-size: 0.85rem; margin-top: 1.5rem; color: var(--muted);">We’ll only use your email to reply. No newsletters unless you ask.</p>
+      </div>
+
+      <!-- SIDEBAR WITH CONTACT INFO -->
+      <aside>
+        <div class="sidebar-widget">
+          <h3>Other ways to reach us</h3>
+          <ul class="contact-info-list">
+            <li>
+              <span class="icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <span>hello@edensugarhouse.com</span>
+              </div>
+            </li>
+            <li>
+              <span class="icon">📍</span>
+              <div>
+                <strong>Kitchen (by appointment)</strong>
+                <span>Hudson Valley, NY</span>
+              </div>
+            </li>
+            <li>
+              <span class="icon">⏳</span>
+              <div>
+                <strong>Response time</strong>
+                <span>Usually within 24–48 hours</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Follow along</h3>
+          <p style="font-size: 0.95rem; margin-bottom: 1rem;">Daily baking, preserving experiments, and kitchen notes.</p>
+          <div class="social-links-contact">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Pinterest">Pinterest</a>
+            <a href="#" aria-label="Substack">Substack</a>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>From the pantry</h3>
+          <p style="font-size: 0.95rem; font-style: italic;">“The kitchen is a place of quiet alchemy. Every jar, every loaf is a small act of hope.” — Elara Voss</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- ========== FAQ (contact-specific) ========== -->
+    <section id="contact-faq" style="margin: 2rem 0 3rem;">
+      <div class="section-title">
+        <h2>Before you write</h2>
+        <span>Common questions</span>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Can I republish your recipes?</h3>
+          <p>We’re honored you’d ask! Please email us for permission — we usually say yes with a link back. Full terms on our <a href="terms.html" style="color: var(--accent); text-decoration: underline;">terms page</a>.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you offer baking classes or workshops?</h3>
+          <p>Not currently, but we’re planning small seasonal workshops. Drop us a note and we’ll add you to the interest list.</p>
+        </div>
+        <div class="faq-item">
+          <h3>I’m having trouble with a recipe. Can you help?</h3>
+          <p>Absolutely. Include the recipe name and what happened — we’ll troubleshoot together. Photos help!</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I subscribe to your newsletter?</h3>
+          <p>You can sign up on our <a href="index.html#newsletter" style="color: var(--accent); text-decoration: underline;">homepage</a>. We send one email a week, no spam.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT / SHORT PRIVACY NOTE ========== -->
+    <section id="about-contact" style="margin: 2rem 0 1rem; border-top: 1px solid var(--border-light); padding-top: 2rem;">
+      <div style="max-width: 700px;">
+        <p style="font-size: 0.95rem;"><strong>Privacy note:</strong> Your message goes directly to our inbox. We never share or sell your email. <a href="privacy.html" style="color: var(--accent); text-decoration: underline;">Read our full policy</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="font-size: 1.6rem;">
+            <span class="logo-mark" aria-hidden="true"></span>
+            Eden Sugar House
+          </a>
+          <p style="font-size: 0.9rem; margin-top: 1rem; color: var(--muted);">Slow baking, wild sweetness, and preserving the seasons. A journal from our kitchen to yours.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html#baking">Baking</a></li>
+            <li><a href="index.html#preserving">Preserving</a></li>
+            <li><a href="index.html#seasonal">Seasonal</a></li>
+            <li><a href="index.html#pantry">Pantry</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">Substack</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Eden Sugar House. All rights reserved.</span>
+        <span>Made with patience and wild yeast.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCHEMA MARKUP for ContactPage ========== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Eden Sugar House",
+    "url": "https://edensugarhouse.com/contact.html",
+    "description": "Contact the bakers and preservers at Eden Sugar House.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Eden Sugar House",
+      "email": "hello@edensugarhouse.com",
+      "url": "https://edensugarhouse.com"
+    }
+  }
+  </script>
+
+  <!-- ========== INTERACTIVE JAVASCRIPT (contact form demo) ========== -->
+  <script>
+    (function() {
+      'use strict';
+
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          // simple validation
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const message = document.getElementById('message').value.trim();
+          if (!name || !email || !message) {
+            alert('Please fill in your name, email, and message.');
+            return;
+          }
+          // Demo success message
+          alert('Thank you, ' + name + '! Your message has been sent (demo). We’ll reply to ' + email + ' soon.');
+          contactForm.reset();
+        });
+      }
+
+      // smooth anchor scrolling for internal links (already smooth via CSS, but keep for older browsers)
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href').substring(1);
+          if (targetId) {
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) {
+              e.preventDefault();
+              targetEl.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

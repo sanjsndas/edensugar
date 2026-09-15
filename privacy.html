@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO essentials -->
+  <title>Privacy Policy · Eden Sugar House — Slow Baking & Preserving</title>
+  <meta name="description" content="Privacy policy for Eden Sugar House. Learn how we collect, use, and protect your personal information.">
+  <meta property="og:title" content="Privacy Policy · Eden Sugar House">
+  <meta property="og:description" content="How we handle your data with care — just like our baking.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edensugarhouse.com/privacy.html">
+  <meta property="og:image" content="https://edensugarhouse.com/images/og-privacy.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://edensugarhouse.com/privacy.html">
+  <!-- Fonts & minimal style reset (same as homepage) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- design tokens (identical to homepage) ---------- */
+    :root {
+      --bg: #fcf9f4;
+      --surface: #ffffff;
+      --ink: #1e1b16;
+      --ink-soft: #3a352e;
+      --muted: #6b645c;
+      --border: #e2dbd2;
+      --border-light: #eee8e0;
+      --accent: #9f6b4b;
+      --accent-soft: #f2e3d9;
+      --accent-deep: #6e4e38;
+      --sage: #72856b;
+      --radius-card: 16px;
+      --radius-sm: 6px;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.02);
+      --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --max-blog-width: 1120px;
+    }
+
+    /* ---------- base ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    button, input, textarea {
+      font: inherit;
+      color: inherit;
+    }
+
+    /* ---------- typography ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    h1 {
+      font-size: clamp(2rem, 7vw, 3.6rem);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+    }
+    h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin: 2rem 0 1rem;
+      font-weight: 400;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin: 1.75rem 0 0.75rem;
+      font-weight: 450;
+    }
+    p {
+      color: var(--ink-soft);
+      margin-bottom: 1.25rem;
+    }
+    ul, ol {
+      margin: 0 0 1.5rem 1.5rem;
+      color: var(--ink-soft);
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---------- layout containers ---------- */
+    .container {
+      max-width: var(--max-blog-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- header (identical to homepage) ---------- */
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1.25rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.92);
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .logo-mark {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      background: var(--accent);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+      position: relative;
+      flex-shrink: 0;
+    }
+    .logo-mark::after {
+      content: "◇";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+      font-size: 0.95rem;
+      font-weight: 450;
+      color: var(--muted);
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- privacy page specific ---------- */
+    .privacy-card {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-sm);
+      margin: 2.5rem 0 3rem;
+    }
+    .privacy-card h1 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      margin-bottom: 0.5rem;
+    }
+    .privacy-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1.25rem;
+    }
+    .privacy-card h2 {
+      font-size: 1.6rem;
+      margin-top: 2.2rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 0.5rem;
+    }
+    .privacy-card h3 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .privacy-card a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .privacy-card a:hover {
+      color: var(--accent-deep);
+    }
+    .privacy-card ul, .privacy-card ol {
+      margin-left: 1.8rem;
+    }
+    .privacy-card li {
+      margin-bottom: 0.6rem;
+    }
+    .privacy-card .note-box {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 1.75rem 0;
+    }
+    .privacy-card .note-box p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+    .privacy-card .note-box strong {
+      color: var(--accent-deep);
+    }
+
+    /* ---------- footer ---------- */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border-light);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media (min-width: 700px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+      }
+    }
+    .footer-col h4 {
+      font-size: 1rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+    .footer-col ul {
+      list-style: none;
+      margin-left: 0;
+    }
+    .footer-col li {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+    .footer-bottom {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--muted);
+      gap: 1rem;
+    }
+
+    /* ---------- utility ---------- */
+    .hidden { display: none !important; }
+    .mt-2 { margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Eden Sugar House home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        Eden Sugar House
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html" style="color: var(--accent);">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ========== PRIVACY POLICY CONTENT ========== -->
+    <div class="privacy-card">
+      <h1>Privacy Policy</h1>
+      <div class="privacy-meta">
+        <span>Last updated: April 2025</span> · <span>Version 1.0</span>
+      </div>
+
+      <p>At Eden Sugar House, we believe in transparency and treating your personal information with the same care we give to a slow-rising dough. This policy explains what data we collect, why we collect it, and how you can exercise your rights.</p>
+
+      <div class="note-box">
+        <p><strong>In short:</strong> We only collect what we need to reply to you, improve your reading experience, and keep the site running. We never sell your data. Ever.</p>
+      </div>
+
+      <h2>1. Who we are</h2>
+      <p>Eden Sugar House is a personal baking and preserving journal based in Hudson Valley, New York. Our website address is <a href="https://edensugarhouse.com">https://edensugarhouse.com</a>. For any privacy-related questions, you can contact us at <a href="mailto:hello@edensugarhouse.com">hello@edensugarhouse.com</a>.</p>
+
+      <h2>2. What information we collect</h2>
+      <p>We collect information in three ways:</p>
+      <h3>Information you give us directly</h3>
+      <ul>
+        <li><strong>Contact form:</strong> When you send us a message via our <a href="contact.html">contact page</a>, we collect your name, email address, subject line, and the content of your message.</li>
+        <li><strong>Newsletter signup (if applicable):</strong> If you subscribe to our newsletter, we collect your email address and, optionally, your first name.</li>
+        <li><strong>Recipe feedback or comments:</strong> If you leave a comment or send feedback, we store that information along with your name and email (if provided).</li>
+      </ul>
+
+      <h3>Information we collect automatically</h3>
+      <ul>
+        <li><strong>Log data:</strong> Like most websites, our server automatically records information such as your IP address, browser type, operating system, referring pages, and the date/time of your visit. This helps us understand traffic patterns and keep the site secure.</li>
+        <li><strong>Cookies and similar technologies:</strong> We use minimal cookies to remember your preferences (for example, if you dismiss a notice). We do not use tracking cookies for advertising. See our <a href="cookies.html">Cookies Policy</a> for details.</li>
+      </ul>
+
+      <h3>Information from third parties</h3>
+      <p>We do not purchase or receive personal data about you from third-party sources.</p>
+
+      <h2>3. How we use your information</h2>
+      <p>We use the information we collect for the following purposes:</p>
+      <ul>
+        <li><strong>To reply to your messages:</strong> If you contact us, we use your email address to respond. We may also keep a record of our correspondence to help with future inquiries.</li>
+        <li><strong>To send newsletters (only if you opt in):</strong> If you subscribe, we use your email to send you occasional updates about new recipes, seasonal preserving notes, or site news. Every newsletter includes an unsubscribe link.</li>
+        <li><strong>To improve our website:</strong> We analyze anonymized usage data (like page views and referral sources) to understand what content is helpful and to fix technical issues.</li>
+        <li><strong>To maintain security:</strong> We may use log data to detect and prevent malicious activity or abuse.</li>
+      </ul>
+
+      <div class="note-box">
+        <p><strong>We never sell, rent, or trade your personal information</strong> to any third party for marketing or any other purpose.</p>
+      </div>
+
+      <h2>4. Legal basis for processing (GDPR & similar laws)</h2>
+      <p>If you are located in the European Economic Area (EEA), UK, or Switzerland, our legal basis for processing your personal data depends on the context:</p>
+      <ul>
+        <li><strong>Consent:</strong> When you voluntarily submit a contact form or subscribe to a newsletter, you consent to us using your data to respond or send updates. You can withdraw consent at any time.</li>
+        <li><strong>Legitimate interests:</strong> We have a legitimate interest in maintaining the security and functionality of our website, and in understanding how visitors use our content so we can improve it.</li>
+        <li><strong>Legal obligation:</strong> In rare cases, we may need to retain data to comply with a legal obligation.</li>
+      </ul>
+
+      <h2>5. How long we keep your data</h2>
+      <ul>
+        <li><strong>Contact form submissions:</strong> We retain messages for up to 24 months, unless a longer period is needed to resolve an ongoing issue or comply with legal requirements.</li>
+        <li><strong>Newsletter subscriptions:</strong> We keep your email address until you unsubscribe, after which we may retain a minimal suppression record to ensure we don't email you again.</li>
+        <li><strong>Server logs:</strong> Log data is typically kept for 12 months and then deleted or anonymized.</li>
+        <li><strong>Cookies:</strong> Persistent cookies expire after 12 months; session cookies expire when you close your browser.</li>
+      </ul>
+
+      <h2>6. Who we share data with</h2>
+      <p>We do not share your personal information with third parties except in the following limited circumstances:</p>
+      <ul>
+        <li><strong>Service providers:</strong> We may use trusted third-party services to help operate the site — for example, a newsletter platform (like Substack or Mailchimp) or a hosting provider. These providers only access data necessary to perform their functions and are contractually obligated to protect it.</li>
+        <li><strong>Legal requirements:</strong> We may disclose information if required by law, subpoena, or to protect the rights, property, or safety of Eden Sugar House, our readers, or others.</li>
+      </ul>
+      <p>Our website may contain links to other sites (like Instagram or Pinterest). We are not responsible for the privacy practices of those external platforms.</p>
+
+      <h2>7. Your rights</h2>
+      <p>Depending on where you live, you may have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
+        <li><strong>Correction:</strong> Ask us to correct inaccurate or incomplete information.</li>
+        <li><strong>Deletion:</strong> Request that we delete your personal data, subject to certain legal exceptions.</li>
+        <li><strong>Restriction:</strong> Ask us to limit how we process your data.</li>
+        <li><strong>Portability:</strong> Request that we transfer your data to another organization in a machine-readable format.</li>
+        <li><strong>Objection:</strong> Object to processing based on legitimate interests.</li>
+        <li><strong>Withdraw consent:</strong> If we relied on your consent, you can withdraw it at any time.</li>
+      </ul>
+      <p>To exercise any of these rights, please email us at <a href="mailto:hello@edensugarhouse.com">hello@edensugarhouse.com</a>. We will respond within 30 days. You also have the right to lodge a complaint with your local data protection authority.</p>
+
+      <h2>8. Children’s privacy</h2>
+      <p>Our website is not directed at children under 13 (or 16 in some jurisdictions). We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us and we will delete it promptly.</p>
+
+      <h2>9. International data transfers</h2>
+      <p>Eden Sugar House is based in the United States. If you are visiting from outside the U.S., please be aware that your information may be transferred to, stored, and processed in the U.S., where our servers are located. By using our site, you consent to this transfer. We take steps to ensure that any international transfer complies with applicable data protection laws.</p>
+
+      <h2>10. Security</h2>
+      <p>We take reasonable technical and organizational measures to protect your personal data from unauthorized access, loss, or misuse. This includes using HTTPS encryption, keeping software up to date, and limiting access to personal data to those who need it. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+
+      <h2>11. Changes to this policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. When we do, we will revise the “Last updated” date at the top of this page. We encourage you to review this policy periodically. If we make material changes, we will provide a more prominent notice (such as a banner on the homepage).</p>
+
+      <h2>12. Contact us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your data, please don’t hesitate to reach out:</p>
+      <ul>
+        <li>Email: <a href="mailto:hello@edensugarhouse.com">hello@edensugarhouse.com</a></li>
+        <li>Contact page: <a href="contact.html">edensugarhouse.com/contact</a></li>
+      </ul>
+      <p>We’re a small team, but we read every message and will do our best to help.</p>
+
+      <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light); font-size: 0.9rem; color: var(--muted);">
+        <p>This privacy policy is intended to comply with the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other applicable privacy laws. It is provided for informational purposes and does not constitute legal advice.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="font-size: 1.6rem;">
+            <span class="logo-mark" aria-hidden="true"></span>
+            Eden Sugar House
+          </a>
+          <p style="font-size: 0.9rem; margin-top: 1rem; color: var(--muted);">Slow baking, wild sweetness, and preserving the seasons. A journal from our kitchen to yours.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html#baking">Baking</a></li>
+            <li><a href="index.html#preserving">Preserving</a></li>
+            <li><a href="index.html#seasonal">Seasonal</a></li>
+            <li><a href="index.html#pantry">Pantry</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">Substack</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Eden Sugar House. All rights reserved.</span>
+        <span>Made with patience and wild yeast.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCHEMA MARKUP for PrivacyPolicy ========== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy — Eden Sugar House",
+    "url": "https://edensugarhouse.com/privacy.html",
+    "description": "Privacy policy for Eden Sugar House. Learn how we collect, use, and protect your personal information.",
+    "about": {
+      "@type": "Thing",
+      "name": "Privacy Policy"
+    },
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Eden Sugar House",
+      "email": "hello@edensugarhouse.com",
+      "url": "https://edensugarhouse.com"
+    }
+  }
+  </script>
+
+  <!-- ========== INTERACTIVE JAVASCRIPT (minimal) ========== -->
+  <script>
+    (function() {
+      'use strict';
+      // Smooth anchor scrolling for internal links (already smooth via CSS, but keep for older browsers)
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href').substring(1);
+          if (targetId) {
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) {
+              e.preventDefault();
+              targetEl.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

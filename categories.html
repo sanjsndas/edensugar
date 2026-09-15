@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories · Eden Sugar House</title>
+  <meta name="description" content="Browse all categories on Eden Sugar House — from slow baking and preserving to seasonal recipes and pantry staples.">
+  <meta property="og:title" content="Categories · Eden Sugar House">
+  <meta property="og:description" content="Explore our collection of recipes, guides, and stories by category.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edensugarhouse.com/categories.html">
+  <meta property="og:image" content="https://edensugarhouse.com/images/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://edensugarhouse.com/categories.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- design tokens (identical to main site) ---------- */
+    :root {
+      --bg: #fcf9f4;
+      --surface: #ffffff;
+      --ink: #1e1b16;
+      --ink-soft: #3a352e;
+      --muted: #6b645c;
+      --border: #e2dbd2;
+      --border-light: #eee8e0;
+      --accent: #9f6b4b;
+      --accent-soft: #f2e3d9;
+      --accent-deep: #6e4e38;
+      --sage: #72856b;
+      --radius-card: 16px;
+      --radius-sm: 6px;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.02);
+      --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --max-blog-width: 1120px;
+    }
+
+    /* ---------- base ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ---------- typography ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    h1 {
+      font-size: clamp(2rem, 7vw, 3.6rem);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+    }
+    h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin: 2rem 0 1rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+      margin: 1.8rem 0 0.75rem;
+      font-weight: 450;
+    }
+    p {
+      color: var(--ink-soft);
+      margin-bottom: 1.25rem;
+    }
+    ul, ol {
+      margin: 1rem 0 1.5rem 1.8rem;
+      color: var(--ink-soft);
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---------- layout ---------- */
+    .container {
+      max-width: var(--max-blog-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- header (identical) ---------- */
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1.25rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.92);
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .logo-mark {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      background: var(--accent);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+      position: relative;
+      flex-shrink: 0;
+    }
+    .logo-mark::after {
+      content: "◇";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+      font-size: 0.95rem;
+      font-weight: 450;
+      color: var(--muted);
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- categories page specific ---------- */
+    .categories-hero {
+      margin: 3rem 0 2rem;
+      max-width: 750px;
+    }
+    .categories-hero h1 {
+      margin-bottom: 1.2rem;
+    }
+    .categories-hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
+    }
+    .categories-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 2rem;
+    }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .category-card {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 2rem 1.8rem 1.8rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .category-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.02);
+      border-color: var(--border);
+    }
+
+    .category-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--accent-soft);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+      font-size: 1.6rem;
+      color: var(--accent-deep);
+    }
+
+    .category-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 450;
+      margin: 0 0 0.6rem 0;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .category-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+
+    .category-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--accent-deep);
+      transition: color 0.2s, gap 0.2s;
+      margin-top: auto;
+      border-top: 1px solid var(--border-light);
+      padding-top: 1rem;
+    }
+    .category-link:hover {
+      color: var(--accent);
+      gap: 0.7rem;
+    }
+    .category-link span {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .category-count {
+      font-size: 0.75rem;
+      font-weight: 500;
+      background: var(--bg);
+      color: var(--muted);
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      margin-left: 0.5rem;
+      border: 1px solid var(--border-light);
+    }
+
+    /* ---------- featured / note section ---------- */
+    .categories-note {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 2.5rem 2.5rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .categories-note h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      border-bottom: none;
+    }
+    .categories-note p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .categories-note .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.8rem 2.2rem;
+      border-radius: 40px;
+      transition: background 0.2s;
+      margin-top: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+    .categories-note .btn:hover {
+      background: var(--accent-deep);
+    }
+
+    @media (max-width: 600px) {
+      .categories-note {
+        padding: 1.8rem 1.5rem;
+      }
+      .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    /* ---------- footer (identical) ---------- */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border-light);
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media (min-width: 700px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+      }
+    }
+    .footer-col h4 {
+      font-size: 1rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+    .footer-col ul {
+      list-style: none;
+      margin-left: 0;
+    }
+    .footer-col li {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+    .footer-bottom {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--muted);
+      gap: 1rem;
+    }
+
+    /* utility */
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Eden Sugar House home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        Eden Sugar House
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html" style="color: var(--accent);">Categories</a></li>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ========== CATEGORIES HERO ========== -->
+    <section class="categories-hero">
+      <h1>Categories</h1>
+      <p>Browse our journal by topic — from slow baking and preserving to seasonal recipes and pantry staples. Every category is a path into the kitchen.</p>
+      <div class="categories-meta">
+        <span>6 categories</span> · <span>Updated March 2025</span>
+      </div>
+    </section>
+
+    <!-- ========== CATEGORIES GRID ========== -->
+    <div class="categories-grid">
+      <!-- Baking -->
+      <article class="category-card">
+        <div class="category-icon" aria-hidden="true">🍞</div>
+        <h3>Baking</h3>
+        <p>Slow-fermented breads, buttery pastries, and cakes that reward patience. From sourdough starters to laminated doughs, this is where flour meets time.</p>
+        <a href="#" class="category-link">Explore Baking <span>→</span></a>
+      </article>
+
+      <!-- Preserving -->
+      <article class="category-card">
+        <div class="category-icon" aria-hidden="true">🍓</div>
+        <h3>Preserving</h3>
+        <p>Jams, jellies, pickles, and ferments. Capture the seasons in jars — whether it's strawberry preserves in June or spiced pear butter in October.</p>
+        <a href="#" class="category-link">Explore Preserving <span>→</span></a>
+      </article>
+
+      <!-- Seasonal -->
+      <article class="category-card">
+        <div class="category-icon" aria-hidden="true">🍂</div>
+        <h3>Seasonal</h3>
+        <p>Cooking with the rhythms of the year. Spring rhubarb, summer stone fruit, autumn squash, and winter citrus — recipes that follow the calendar.</p>
+        <a href="#" class="category-link">Explore Seasonal <span>→</span></a>
+      </article>
+
+      <!-- Pantry -->
+      <article class="category-card">
+        <div class="category-icon" aria-hidden="true">🫙</div>
+        <h3>Pantry</h3>
+        <p>Staples, condiments, and building blocks. Homemade vanilla, cultured butter, infused oils, and everything that makes a kitchen hum.</p>
+        <a href="#" class="category-link">Explore Pantry <span>→</span></a>
+      </article>
+
+      <!-- Techniques -->
+      <article class="category-card">
+        <div class="category-icon" aria-hidden="true">🥄</div>
+        <h3>Techniques</h3>
+        <p>Guides and tutorials for the curious cook. Laminating dough, water-bath canning, tempering chocolate, and other skills worth mastering.</p>
+        <a href="#" class="category-link">Explore Techniques <span>→</span></a>
+      </article>
+
+      <!-- Stories -->
+      <article class="category-card">
+        <div class="category-icon" aria-hidden="true">📖</div>
+        <h3>Stories</h3>
+        <p>Notes from the kitchen table. Essays on food memory, the people behind the recipes, and the small moments that make cooking meaningful.</p>
+        <a href="#" class="category-link">Explore Stories <span>→</span></a>
+      </article>
+    </div>
+
+    <!-- ========== NOTE / CTA ========== -->
+    <div class="categories-note">
+      <h2>Looking for something specific?</h2>
+      <p>We're always adding new recipes and guides. If you can't find what you're looking for, drop us a line — we love a good kitchen challenge.</p>
+      <a href="contact.html" class="btn">Get in touch</a>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="font-size: 1.6rem;">
+            <span class="logo-mark" aria-hidden="true"></span>
+            Eden Sugar House
+          </a>
+          <p style="font-size: 0.9rem; margin-top: 1rem; color: var(--muted);">Slow baking, wild sweetness, and preserving the seasons. A journal from our kitchen to yours.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html#baking">Baking</a></li>
+            <li><a href="index.html#preserving">Preserving</a></li>
+            <li><a href="index.html#seasonal">Seasonal</a></li>
+            <li><a href="index.html#pantry">Pantry</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">Substack</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Eden Sugar House. All rights reserved.</span>
+        <span>Made with patience and wild yeast.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
